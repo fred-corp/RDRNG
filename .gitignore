@@ -3,3 +3,8 @@
 private
 *.log
 build
+
+# VUnit development dir
+vunit
+# VUnit ooutput dir
+vunit_out
