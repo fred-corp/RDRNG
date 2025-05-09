@@ -6,5 +6,5 @@ build
 
 # VUnit development dir
 vunit
-# VUnit ooutput dir
+# VUnit output dir
 vunit_out
