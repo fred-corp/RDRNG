@@ -227,12 +227,6 @@ begin
           rng_load_new_seed <= '0';
         end if;
 
-        if cr_generate_number = '1' then
-          rng_gen_new_num <= '1';
-        else
-          rng_gen_new_num <= '0';
-        end if;
-
         random_number <= rng_output;
         cr_seed       <= rng_seed;
       else
