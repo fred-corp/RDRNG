@@ -20,7 +20,7 @@ entity top is
     spi_cs   : in std_logic;
 
     -- Inputs
-    pulse_input : in std_logic
+    pulse_input : in std_logic;
 
     -- Outputs
     led_r : out std_logic;
@@ -228,11 +228,11 @@ begin
         end if;
 
         random_number <= rng_output;
-        custom_seed   <= rng_seed;
+        cr_seed       <= rng_seed;
       else
         -- Decay sampling
         random_number <= s_ds_output;
-        custom_seed   <= s_ds_output;
+        cr_seed       <= s_ds_output;
       end if;
 
       if ds_output_valid = '1' then
@@ -241,12 +241,6 @@ begin
 
       -- Reset handling
       if reset = '1' then
-        -- RNG
-        rng_load_new_seed <= '0';
-        rng_polynomial    <= (others => '0');
-        rng_seed          <= (others => '0');
-        rng_gen_new_num   <= '0';
-
         -- Mapped outputs
         random_number <= (others => '0');
       end if;
