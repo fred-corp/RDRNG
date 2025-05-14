@@ -22,20 +22,20 @@ jobs:
           echo "List files: $(ls -l)"
           echo "List Root files: $(ls -l /)"
           
-      - name: Set up Nix
+      - name: Set up Nix & Checkout OpenLane
         run: |
-          git clone https://github.com/efabless/openlane2 && cd openlane2 && nix develop --accept-flake-config --system x86_64-linux --command openlane --smoke-test
-
-      - name: check OpenLane
-        run: |
-          pwd && ls && cd openlane2 && openlane --smoke-test
+          git clone https://github.com/efabless/openlane2 &&\
+          cd openlane2 && \
+          nix develop --accept-flake-config --system x86_64-linux 
+        # --command \
+        # openlane --smoke-test
 
       - name: Create GDS file
         run: |
-          cd
-          pwd
-          ls
-          cd openlane
+          cd openlane2 && \
+          nix develop --accept-flake-config --system x86_64-linux --command \
+          openlane --smoke-test && \
+          cd ../openlane && \
           openlane --flow VHDLClassic config.json
     
       - name: Workflow got to the end Successfully ✅
