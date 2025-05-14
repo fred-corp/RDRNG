@@ -36,25 +36,25 @@ begin
       if load_seed = '1' then
         lfsr <= seed_in;
       elsif enable = '1' then
-        lfsr <= lfsr(14 downto 0) &
-          (lfsr(15) xor lfsr(13) xor lfsr(12) xor lfsr(10));
-        -- if polynomial = "00" then
-        --   -- Update LFSR with taps: x^16 + x^14 + x^13 + x^11 + 1
-        --   lfsr <= lfsr(14 downto 0) &
-        --     (lfsr(15) xor lfsr(13) xor lfsr(12) xor lfsr(10));
-        -- elsif polynomial = "01" then
-        --   -- Update LFSR with taps: x^16 + x^15 + x^13 + x^4 + 1
-        --   lfsr <= lfsr(14 downto 0) &
-        --     (lfsr(15) xor lfsr(14) xor lfsr(12) xor lfsr(3));
-        -- elsif polynomial = "10" then
-        --   -- Update LFSR with taps: x^16 + x^4 + x^3 + x^2 + 1
-        --   lfsr <= lfsr(14 downto 0) &
-        --     (lfsr(15) xor lfsr(4) xor lfsr(2) xor lfsr(1));
-        -- elsif polynomial = "11" then
-        --   -- Update LFSR with taps: x^16 + x^12 + x^3 + x^1 + 1
-        --   lfsr <= lfsr(14 downto 0) &
-        --     (lfsr(15) xor lfsr(11) xor lfsr(2) xor lfsr(0));
-        -- end if;
+        -- lfsr <= lfsr(14 downto 0) &
+        --   (lfsr(15) xor lfsr(13) xor lfsr(12) xor lfsr(10));
+        if polynomial = "00" then
+          -- Update LFSR with taps: x^16 + x^14 + x^13 + x^11 + 1
+          lfsr <= lfsr(14 downto 0) &
+            (lfsr(15) xor lfsr(13) xor lfsr(12) xor lfsr(10));
+        elsif polynomial = "01" then
+          -- Update LFSR with taps: x^16 + x^15 + x^13 + x^4 + 1
+          lfsr <= lfsr(14 downto 0) &
+            (lfsr(15) xor lfsr(14) xor lfsr(12) xor lfsr(3));
+        elsif polynomial = "10" then
+          -- Update LFSR with taps: x^16 + x^4 + x^3 + x^2 + 1
+          lfsr <= lfsr(14 downto 0) &
+            (lfsr(15) xor lfsr(4) xor lfsr(2) xor lfsr(1));
+        elsif polynomial = "11" then
+          -- Update LFSR with taps: x^16 + x^12 + x^3 + x^1 + 1
+          lfsr <= lfsr(14 downto 0) &
+            (lfsr(15) xor lfsr(11) xor lfsr(2) xor lfsr(0));
+        end if;
       end if;
       if rst = '1' then
         lfsr <= (others => '0'); -- Reset to all 0s (or you can choose a default)
