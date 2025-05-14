@@ -25,11 +25,13 @@ jobs:
       - name: Set up Nix
         run: |
           git clone https://github.com/efabless/openlane2
+          ls
           cd openlane2
           nix develop --accept-flake-config --system x86_64-linux   
 
       - name: check OpenLane
         run: |
+          ls
           openlane --smoke-test
           ls
 
