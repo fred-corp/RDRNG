@@ -31,4 +31,4 @@ jobs:
 
 
       - name: Workflow go to the end Successfully ✅
-        run: echo "Test ended!"
+        run: echo "Test ended !"
