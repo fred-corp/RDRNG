@@ -21,5 +21,6 @@
     "SYNTH_FLATTEN": 1,
     "SYNTH_NO_FLAT": 1,
     "ABC_CLOCK_PERIOD": 1.0,
-    "ABC_NO_FLAT": 1
+    "ABC_NO_FLAT": 1,
+    "FP_PIN_ORDER_CFG" : "pins.cfg"
 }
