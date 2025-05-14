@@ -63,6 +63,7 @@ jobs:
           sudo apt-get install verilator
           sudo python3 --version
           sudo python3 -m pip --version
+          sudo python3 -m pip install yowasp-yosys
           sudo python3 -m pip install openlane
 
       - name: Set Terminal Env
