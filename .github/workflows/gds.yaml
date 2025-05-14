@@ -24,14 +24,11 @@ jobs:
           
       - name: Set up Nix
         run: |
-          git clone https://github.com/efabless/openlane2 && cd openlane2 && nix develop --accept-flake-config --system x86_64-linux
+          git clone https://github.com/efabless/openlane2 && cd openlane2 && nix develop --accept-flake-config --system x86_64-linux --command openlane --smoke-test
 
       - name: check OpenLane
         run: |
-          ls && \
-          cd openlane2 && \
-          openlane --smoke-test
-          ls
+          pwd && ls && cd openlane2 && openlane --smoke-test
 
       - name: Create GDS file
         run: |
