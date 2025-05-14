@@ -8,7 +8,7 @@ on:
 
 jobs:
   create_gds:
-    runs-on: ubunbtu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: write   # needed to push tags and create releases
       packages: write
