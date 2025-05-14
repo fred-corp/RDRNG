@@ -8,6 +8,7 @@ VHDL_FILES = \
 	rtl/spi_protocol/spi_protocol.vhd \
 	rtl/config_regs/config_regs.vhd \
 	rtl/rand_gen/rand_gen.vhd \
+	rtl/decay_sampler/decay_sampler.vhd \
 
 VHDL_LIB_FILES = \
 	open-logic/src/base/vhdl/olo_base_pkg_attribute.vhd \
@@ -21,7 +22,7 @@ VHDL_LIB_FILES = \
 
 BUILD_DIR = build
 
-TESTBENCH_DIR = sim/top/
+TESTBENCH_DIR = sim
 TESTBENCH_VIEWER = surfer
 
 # FPGA specific variables
@@ -46,10 +47,20 @@ flash:
 	@echo "Flashing bitstream"
 	dfu-util --alt 0 --download $(BUILD_DIR)/$(PROJECT_NAME)_bitstream.bin --reset;
 
-testbench:
+testbench_top :
 	@echo "Running testbench"
 	cd ${TESTBENCH_DIR} && \
 	source ./venv/bin/activate && \
+	cd top && \
+	python3 run.py --gui --viewer ${TESTBENCH_VIEWER} --viewer-fmt=vcd
+	@echo "Done - testbench location : \"$(TESTBENCH_DIR)\""
+
+
+testbench_decay_sampler : 
+	@echo "Running testbench"
+	cd ${TESTBENCH_DIR} && \
+	source ./venv/bin/activate && \
+	cd decay_sampler && \
 	python3 run.py --gui --viewer ${TESTBENCH_VIEWER} --viewer-fmt=vcd
 	@echo "Done - testbench location : \"$(TESTBENCH_DIR)\""
 
