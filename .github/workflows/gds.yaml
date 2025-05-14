@@ -32,7 +32,7 @@ jobs:
 
       - name: Create GDS file
         run: |
-          cd openlane && \
+          cd openlane2 && \
           nix develop --accept-flake-config --system x86_64-linux --command "\
           cd ../openlane && \
           openlane --flow VHDLClassic config.json"
