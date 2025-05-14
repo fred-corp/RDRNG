@@ -47,7 +47,7 @@ begin
       -- Check for rising edge of the pulse
       if (s_pulse = '1' and s_pulse_prev = '0') then
         -- Generate random number
-        s_output     <= std_logic_vector(counter(output_width - counter_slice downto counter_slice - 1));
+        s_output     <= std_logic_vector(counter(output_width + counter_slice - 2 downto counter_slice - 1));
         output_valid <= '1';
         counter      <= (others => '0'); -- Reset counter after pulse
       else
