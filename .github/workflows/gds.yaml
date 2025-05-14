@@ -10,7 +10,7 @@ jobs:
   create_gds:
     runs-on: self-hosted
     permissions:
-      contents: read
+      contents: write   # needed to push tags and create releases
       packages: write
     steps:
       - name: Checkout Repository Code
@@ -27,8 +27,6 @@ jobs:
           git clone https://github.com/efabless/openlane2 &&\
           cd openlane2 && \
           nix develop --accept-flake-config --system x86_64-linux 
-        # --command \
-        # openlane --smoke-test
 
       - name: Create GDS file
         run: |
@@ -37,6 +35,48 @@ jobs:
           nix develop --accept-flake-config --system x86_64-linux --command bash -c "\
           cd ../openlane && \
           openlane --flow VHDLClassic config.json"
-    
+
+      - name: Find latest RUN_<date> folder
+        id: find_run
+        run: |
+          cd openlane/runs
+          latest_folder=$(ls -d RUN_* | sort | tail -n 1)
+          echo "Found latest folder: $latest_folder"
+          echo "run_name=$latest_folder" >> $GITHUB_OUTPUT
+          echo "run_path=openlane/runs/$latest_folder" >> $GITHUB_OUTPUT
+
+      - name: Zip the latest run folder
+        run: |
+          cd openlane/runs
+          zip -r "../../${{ steps.find_run.outputs.run_name }}.zip" "${{ steps.find_run.outputs.run_name }}"
+
+      - name: Create Git Tag
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag ${{ steps.find_run.outputs.run_name }}
+          git push origin ${{ steps.find_run.outputs.run_name }}
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.find_run.outputs.run_name }}
+          release_name: Release ${{ steps.find_run.outputs.run_name }}
+          draft: false
+          prerelease: false
+
+      - name: Upload .zip to GitHub Release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./${{ steps.find_run.outputs.run_name }}.zip
+          asset_name: ${{ steps.find_run.outputs.run_name }}.zip
+          asset_content_type: application/zip
+
       - name: Workflow got to the end Successfully ✅
         run: echo "Workflow ended !"
