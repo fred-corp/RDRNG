@@ -1,4 +1,4 @@
-name: Create GDS file
+name: OpenLane Workflow
 
 on:
   push:

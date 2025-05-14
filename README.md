@@ -1,5 +1,7 @@
 # Radioactive Decay Random number generator
 
+![OpenLane Workflow](https://github.com/fred-corp/RDRNG/actions/workflows/gds.yaml/badge.svg)
+
 ## Summary
 
 ## Description
