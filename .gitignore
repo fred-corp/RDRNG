@@ -8,3 +8,7 @@ build
 vunit
 # VUnit output dir
 vunit_out
+
+# Openlane
+# Synthesis
+runs
