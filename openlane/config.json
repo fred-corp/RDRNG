@@ -16,5 +16,10 @@
         "../open-logic/src/intf/vhdl/olo_intf_sync.vhd"
     ],
     "CLOCK_PERIOD": 83.3,
-    "CLOCK_PORT": "clk"
+    "CLOCK_PORT": "clk",
+    "SYNTH_READ_BLACKBOX_LIB": 1,
+    "SYNTH_FLATTEN": 1,
+    "SYNTH_NO_FLAT": 1,
+    "ABC_CLOCK_PERIOD": 1.0,
+    "ABC_NO_FLAT": 1
 }
