@@ -16,30 +16,70 @@ jobs:
       - name: Checkout Repository Code
         uses: actions/checkout@v4
 
-      - name: install curl
-        run: sudo apt-get update && sudo apt-get install -y curl 
+      # - name: install curl
+      #   run: sudo apt-get update && sudo apt-get install -y curl 
       
-      - name: install nix environment
-        run: |
-          curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "\
-          extra-substituters = https://openlane.cachix.org\
-          extra-trusted-public-keys = openlane.cachix.org-1:qqdwh+QMNGmZAuyeQJTH9ErW57OWSvdtuwfBKdS254E=\
-          "
-      - name: Set up Nix
-        run: |
-          git clone https://github.com/efabless/openlane2
-          cd openlane2
-          nix-shell
-          openlane --smoke-test
-          ls
+      # - name: install nix environment
+      #   run: |
+      #     curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "\
+      #     extra-substituters = https://openlane.cachix.org\
+      #     extra-trusted-public-keys = openlane.cachix.org-1:qqdwh+QMNGmZAuyeQJTH9ErW57OWSvdtuwfBKdS254E=\
+      #     "
+      # - name: Set up Nix
+      #   run: |
+      #     git clone https://github.com/efabless/openlane2
+      #     cd openlane2
+      #     nix-shell
+      #     openlane --smoke-test
+      #     ls
 
-      - name: Create GDS file
+      # - name: Create GDS file
+      #   run: |
+      #     cd
+      #     pwd
+      #     ls
+      #     cd openlane
+      #     openlane openlane --flow VHDLClassic config.json
+      - name: install dependencies
         run: |
-          cd
+          sudo apt-get update
+          sudo apt-get upgrade
+          sudo apt install -y build-essential python3 python3-venv python3-pip python3-tk curl make git
+
+      - name: install docker
+        run: |
+          sudo apt-get remove docker docker-engine docker.io containerd runc
+          sudo apt-get update
+          sudo apt-get install \
+            ca-certificates \
+            curl \
+            gnupg \
+            lsb-release
+          sudo mkdir -p /etc/apt/keyrings
+          curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+          echo \
+            "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+            $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+          sudo apt-get update
+          sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+          sudo docker run hello-world
+        
+      - name: install openlane
+        run: |
+          sudo docker --version
+          sudo python3 --version
+          sudo python3 -m pip --version
+          sudo python3 -m pip install openlane
+          sudo python3 -m openlane --dockerized --smoke-test
+
+      - name: run openlane
+        run: |
           pwd
           ls
           cd openlane
-          openlane openlane --flow VHDLClassic config.json
+          sudo python3 -m openlane --dockerized --flow VHDLClassic config.json
+
+
 
       - name: Workflow got to the end Successfully ✅
         run: echo "Workflow ended !"
