@@ -33,10 +33,9 @@ jobs:
       - name: Create GDS file
         run: |
           cd openlane2 && \
-          nix develop --accept-flake-config --system x86_64-linux --command \
-          openlane --smoke-test && \
+          nix develop --accept-flake-config --system x86_64-linux --command "\
           cd ../openlane && \
-          openlane --flow VHDLClassic config.json
+          openlane --flow VHDLClassic config.json"
     
       - name: Workflow got to the end Successfully ✅
         run: echo "Workflow ended !"
