@@ -70,6 +70,8 @@ jobs:
           sudo python3 --version
           sudo python3 -m pip --version
           sudo python3 -m pip install openlane
+        
+      - name: test openlane
           sudo python3 -m openlane --dockerized --smoke-test
 
       - name: run openlane
