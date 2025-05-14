@@ -19,6 +19,10 @@ entity top is
     spi_miso : out std_logic;
     spi_cs   : in std_logic;
 
+    -- Inputs
+    pulse_input : in std_logic
+
+    -- Outputs
     led_r : out std_logic;
     led_g : out std_logic;
     led_b : out std_logic
@@ -56,6 +60,8 @@ architecture rtl of top is
   -- config regs signals
   signal cr_mode            : std_logic                     := '0';
   signal cr_seed            : std_logic_vector(15 downto 0) := x"0000";
+  signal cr_custom_seed     : std_logic_vector(15 downto 0) := x"0000";
+  signal cr_is_custom_seed  : std_logic                     := '0';
   signal cr_generate_seed   : std_logic                     := '0';
   signal cr_generate_number : std_logic                     := '0';
 
@@ -66,6 +72,14 @@ architecture rtl of top is
   signal rng_gen_new_num   : std_logic                    := '0';
   signal rng_load_new_seed : std_logic                    := '0';
   signal rng_polynomial    : std_logic_vector(1 downto 0) := (others => '0');
+
+  -- Decay sampling
+  signal ds_output_valid : std_logic                                     := '0'; --* Output valid signal
+  signal ds_output       : std_logic_vector(rng_output_len - 1 downto 0) := (others => '0'); --* Output random number
+  signal s_ds_output     : std_logic_vector(rng_output_len - 1 downto 0) := (others => '0'); --* Buffered output random number
+
+  -- Mapped outputs
+  signal random_number : std_logic_vector(rng_output_len - 1 downto 0);
 
 begin
   -- *** Reset resynchronization ***
@@ -148,11 +162,12 @@ begin
       s_pwdata  => apb_pwdata,
       s_prdata  => apb_prdata,
       -- Inputs
-      generated_number => rng_output,
-      generated_seed   => rng_seed,
+      generated_number => random_number,
+      generated_seed   => cr_seed,
       -- Outputs
       mode              => cr_mode,
-      custom_seed       => cr_seed,
+      custom_seed       => cr_custom_seed,
+      is_custom_seed    => cr_is_custom_seed,
       generate_seed     => cr_generate_seed,
       choose_polynomial => rng_polynomial,
       generate_number   => rng_gen_new_num,
@@ -178,9 +193,52 @@ begin
       rand_slv   => rng_output
     );
 
+  -- *** Decay sampling instance ***
+  decay_sampler_inst : entity work.decay_sampler
+    generic map(
+      clk_freq      => 12000000, --* Clock frequency in Hz
+      counter_slice => 2, --* Clock scaler for the decay signal
+      output_width  => rng_output_len --* Output width in bits
+    )
+    port map
+    (
+      clk          => clk,
+      reset        => reset,
+      pulse        => pulse_input, --* Pulses from the radioactive decay sensor
+      output_valid => ds_output_valid, --* Output valid signal
+      output       => ds_output --* Output random number
+    );
+
   process (clk)
   begin
     if rising_edge(clk) then
+      -- check mode
+      if cr_mode = '1' then
+        -- LFSR
+        if cr_generate_seed = '1' then
+          if cr_is_custom_seed = '1' then
+            rng_load_new_seed <= '1';
+            rng_seed          <= cr_custom_seed;
+          else
+            rng_load_new_seed <= '1';
+            rng_seed          <= s_ds_output;
+          end if;
+        else
+          rng_load_new_seed <= '0';
+        end if;
+
+        random_number <= rng_output;
+        custom_seed   <= rng_seed;
+      else
+        -- Decay sampling
+        random_number <= s_ds_output;
+        custom_seed   <= s_ds_output;
+      end if;
+
+      if ds_output_valid = '1' then
+        s_ds_output <= ds_output;
+      end if;
+
       -- Reset handling
       if reset = '1' then
         -- RNG
@@ -188,6 +246,9 @@ begin
         rng_polynomial    <= (others => '0');
         rng_seed          <= (others => '0');
         rng_gen_new_num   <= '0';
+
+        -- Mapped outputs
+        random_number <= (others => '0');
       end if;
     end if;
   end process;

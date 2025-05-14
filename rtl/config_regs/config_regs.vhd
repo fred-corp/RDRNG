@@ -32,6 +32,7 @@ entity config_regs is
     -- Random number generator
     custom_seed       : out std_logic_vector(15 downto 0); --* Custom seed for RNG
     generate_seed     : out std_logic; --* Generate new seed from radiactive decay signal
+    is_custom_seed    : out std_logic; --* Custom seed flag
     choose_polynomial : out std_logic_vector(1 downto 0); --* Polynomial selection for LFSR
     generate_number   : out std_logic; --* Generate new random number
 
@@ -46,6 +47,7 @@ architecture rtl of config_regs is
   signal s_mode              : std_logic                     := '0'; --* Mode for RNG
   signal s_custom_seed       : std_logic_vector(15 downto 0) := x"0000"; --* Custom seed for RNG
   signal s_generate_seed     : std_logic                     := '0'; --* Generate new seed from radioactive decay signal
+  signal s_is_custom_seed    : std_logic                     := '0'; --* Custom seed flag
   signal s_generate_number   : std_logic                     := '0'; --* Generate new random number
   signal s_choose_polynomial : std_logic_vector(1 downto 0)  := (others => '0'); --* Polynomial selection for LFSR
 
@@ -76,9 +78,11 @@ begin
               -- Set seed manually
             elsif s_paddr = x"01" then
               s_custom_seed <= s_pwdata;
+              s_is_custom_seed <= '1';
               -- Set seed from Radioactive Decay Pulses
             elsif s_paddr = x"02" then
               s_generate_seed <= '1';
+              s_is_custom_seed <= '0';
               -- Set polynomial for LFSR
             elsif s_paddr = x"03" then
               s_choose_polynomial <= s_pwdata(1 downto 0);
@@ -142,6 +146,7 @@ begin
   -- Assign outputs
   mode              <= s_mode;
   custom_seed       <= s_custom_seed;
+  is_custom_seed    <= s_is_custom_seed;
   generate_seed     <= s_generate_seed;
   generate_number   <= s_generate_number;
   choose_polynomial <= s_choose_polynomial;
