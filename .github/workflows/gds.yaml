@@ -16,6 +16,11 @@ jobs:
       - name: Checkout Repository Code
         uses: actions/checkout@v4
 
+      - name: Debug
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "List files: $(ls -l)"
+
       # - name: install curl
       #   run: sudo apt-get update && sudo apt-get install -y curl 
       
@@ -70,6 +75,10 @@ jobs:
           sudo python3 --version
           sudo python3 -m pip --version
           sudo python3 -m pip install openlane
+
+      - name: Set Terminal Env
+        run: |
+          export TERM=xterm
         
       - name: test openlane
         run: |
