@@ -64,10 +64,6 @@ begin
   process (clk)
   begin
     if rising_edge(clk) then
-      if reset = '1' then
-        state <= IDLE;
-      end if;
-
       case state is
         when IDLE =>
           if rx_valid = '1' then
@@ -167,7 +163,20 @@ begin
         when others =>
           null;
       end case;
-
+      if reset = '1' then
+        state <= IDLE;
+        m_psel <= '0';
+        m_penable <= '0';
+        m_pwrite <= '0';
+        m_pwdata <= (others => '0');
+        m_paddr <= (others => '0');
+        tx_valid <= '0';
+        tx_data  <= (others => '0');
+        apb_data <= (others => '0');
+        address  <= (others => '0');
+        write_flag <= '0';
+        wr_data <= (others => '0');
+      end if;
     end if;
   end process;
 

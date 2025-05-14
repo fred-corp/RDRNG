@@ -53,15 +53,14 @@ architecture rtl of top is
   signal led_out_g : std_logic := '0';
   signal led_out_b : std_logic := '0';
 
-  signal counter : unsigned(23 downto 0) := (others => '0');
-
   -- config regs signals
+  signal cr_mode            : std_logic                     := '0';
   signal cr_seed            : std_logic_vector(15 downto 0) := x"0000";
   signal cr_generate_seed   : std_logic                     := '0';
   signal cr_generate_number : std_logic                     := '0';
 
   -- RNG
-  signal rng_output_len    : integer                                       := 16;
+  constant rng_output_len  : integer                                       := 16;
   signal rng_seed          : std_logic_vector(rng_output_len - 1 downto 0) := x"1234";
   signal rng_output        : std_logic_vector(rng_output_len - 1 downto 0);
   signal rng_gen_new_num   : std_logic                    := '0';
@@ -108,7 +107,7 @@ begin
 
   -- *** SPI protocol ***
   spi_inst : entity work.spi_protocol
-  generic map(
+    generic map(
       TransWidth_g => positive(8)
     )
     port map
@@ -152,6 +151,7 @@ begin
       generated_number => rng_output,
       generated_seed   => rng_seed,
       -- Outputs
+      mode              => cr_mode,
       custom_seed       => cr_seed,
       generate_seed     => cr_generate_seed,
       choose_polynomial => rng_polynomial,
@@ -181,11 +181,13 @@ begin
   process (clk)
   begin
     if rising_edge(clk) then
-      counter <= counter + 1;
+      -- Reset handling
       if reset = '1' then
-        counter   <= (others => '0');
-      else
-        -- Execute architecture
+        -- RNG
+        rng_load_new_seed <= '0';
+        rng_polynomial    <= (others => '0');
+        rng_seed          <= (others => '0');
+        rng_gen_new_num   <= '0';
       end if;
     end if;
   end process;
