@@ -35,7 +35,7 @@ jobs:
         run: |
           git clone https://github.com/efabless/openlane2
           cd openlane2
-          nix-shell
+          nix develop
           openlane --smoke-test
           ls
 
