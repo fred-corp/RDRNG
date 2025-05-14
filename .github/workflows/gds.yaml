@@ -8,7 +8,7 @@ on:
 
 jobs:
   create_gds:
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted
     permissions:
       contents: read
       packages: write
@@ -21,21 +21,12 @@ jobs:
           echo "Current directory: $(pwd)"
           echo "List files: $(ls -l)"
           echo "List Root files: $(ls -l /)"
-
-      - name: install curl
-        run: sudo apt-get update && sudo apt-get install -y curl 
-      
-      - name: install nix environment
-        run: |
-          curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "\
-          extra-substituters = https://openlane.cachix.org\
-          extra-trusted-public-keys = openlane.cachix.org-1:qqdwh+QMNGmZAuyeQJTH9ErW57OWSvdtuwfBKdS254E=\
-          "
+          
       - name: Set up Nix
         run: |
           git clone https://github.com/efabless/openlane2
           cd openlane2
-          nix develop --accept-flake-config
+          nix develop --accept-flake-config --system x86_64-linux   
           openlane --smoke-test
           ls
 
@@ -45,47 +36,7 @@ jobs:
           pwd
           ls
           cd openlane
-          openlane openlane --flow VHDLClassic config.json
+          openlane --flow VHDLClassic config.json
     
-
-      # - name: install dependencies
-      #   run: |
-      #     sudo apt-get update
-      #     sudo apt-get upgrade
-      #     sudo apt install -y build-essential python3 python3-venv python3-pip python3-tk curl make git 
-      
-      # - name: install oss-cad-suite
-      #   run: |
-      #     wget https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2025-05-14/oss-cad-suite-linux-x64-20250514.tgz
-      #     tar -xzf oss-cad-suite-linux-x64-20250514.tgz
-      #     sudo chmod +x ./oss-cad-suite/bin/*
-      #     export PATH=$PATH:$(pwd)/oss-cad-suite/bin
-        
-      # - name: install openlane
-      #   run: |
-      #     sudo apt-get install verilator
-      #     sudo python3 --version
-      #     sudo python3 -m pip --version
-      #     sudo python3 -m pip install yowasp-yosys
-      #     sudo python3 -m pip install openlane
-
-      # - name: Set Terminal Env
-      #   run: |
-      #     export TERM=xterm
-        
-      # - name: test openlane
-      #   run: |
-      #     cd openlane
-      #     sudo python3 -m openlane --smoke-test
-
-      # - name: run openlane
-      #   run: |
-      #     pwd
-      #     ls
-      #     cd openlane
-      #     sudo python3 -m openlane --flow VHDLClassic config.json
-
-
-
       - name: Workflow got to the end Successfully ✅
         run: echo "Workflow ended !"
