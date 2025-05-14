@@ -22,12 +22,15 @@ jobs:
           echo "List files: $(ls -l)"
           echo "List Root files: $(ls -l /)"
           
-      - name: Set up Nix & Checkout OpenLane
+      - name: Set up Nix
         run: |
           curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm --extra-conf "\
               extra-substituters = https://openlane.cachix.org\
               extra-trusted-public-keys = openlane.cachix.org-1:qqdwh+QMNGmZAuyeQJTH9ErW57OWSvdtuwfBKdS254E=\
-          " &&\
+          "
+
+      - name: Checkout OpenLane
+        run: |
           git clone https://github.com/efabless/openlane2 &&\
           cd openlane2 && \
           nix develop --accept-flake-config --system x86_64-linux 
