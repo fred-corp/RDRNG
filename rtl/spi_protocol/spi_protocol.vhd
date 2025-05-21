@@ -10,58 +10,67 @@ use ieee.math_real.all;
 
 entity spi_protocol is
   generic (
-    TransWidth_g              : positive             := 32;
-    SpiCpol_g                 : natural range 0 to 1 := 0;
-    SpiCpha_g                 : natural range 0 to 1 := 0;
-    LsbFirst_g                : boolean              := false;
-    ConsecutiveTransactions_g : boolean              := false;
-    InternalTriState_g        : boolean              := true
+    TransWidth_g              : positive             := 8; --* SPI transaction width
+    SpiCpol_g                 : natural range 0 to 1 := 0; --* SPI clock polarity
+    SpiCpha_g                 : natural range 0 to 1 := 0; --* SPI clock phase
+    LsbFirst_g                : boolean              := false; --* LSB first
+    ConsecutiveTransactions_g : boolean              := false; --* Consecutive transactions
+    InternalTriState_g        : boolean              := true --* Internal tri-state
   );
   port (
-    clk   : in std_logic;
-    reset : in std_logic;
+    clk   : in std_logic; --* Clock input
+    reset : in std_logic; --* Reset input
 
     -- SPI interface
     -- RX Data
-    Rx_Valid : in std_logic;
-    Rx_Data  : in std_logic_vector(TransWidth_g - 1 downto 0);
+    Rx_Valid : in std_logic; --* RX data valid
+    Rx_Data  : in std_logic_vector(TransWidth_g - 1 downto 0); --* RX data
     -- TX Data
-    Tx_Valid : out std_logic := '1';
-    Tx_Ready : in std_logic;
-    Tx_Data  : out std_logic_vector(TransWidth_g - 1 downto 0) := (others => '0');
+    Tx_Valid : out std_logic := '1'; --* TX data valid
+    Tx_Ready : in std_logic; --* TX data ready
+    Tx_Data  : out std_logic_vector(TransWidth_g - 1 downto 0) := (others => '0'); --* TX data
     -- Response Interface
-    Resp_Valid    : in std_logic;
-    Resp_Sent     : in std_logic;
-    Resp_Aborted  : in std_logic;
-    Resp_CleanEnd : in std_logic;
+    Resp_Valid    : in std_logic; --* Response valid
+    Resp_Sent     : in std_logic; --* Response sent
+    Resp_Aborted  : in std_logic; --* Response aborted
+    Resp_CleanEnd : in std_logic; --* Response clean end
 
     -- APB interface
-    m_paddr   : out std_logic_vector(7 downto 0);
-    m_psel    : out std_logic;
-    m_penable : out std_logic;
-    m_pwrite  : out std_logic;
-    m_pwdata  : out std_logic_vector(15 downto 0);
-    m_prdata  : in std_logic_vector(15 downto 0)
+    m_paddr   : out std_logic_vector(7 downto 0); --* APB address
+    m_psel    : out std_logic; --* APB select
+    m_penable : out std_logic; --* APB enable
+    m_pwrite  : out std_logic; --* APB write
+    m_pwdata  : out std_logic_vector(15 downto 0); --* APB write data
+    m_prdata  : in std_logic_vector(15 downto 0)--* APB read data
   );
 end entity spi_protocol;
 
 architecture rtl of spi_protocol is
   type SPI_STATUS is
   (
-  WRITE_ADDRESS, WRITE_DATA0, WRITE_DATA1, WRITE_ANSWER_HEADER, WRITE_ANSWER_OK,
-  READ_ADDRESS, READ_ANSWER_HEADER, READ_ANSWER_DATA0, READ_ANSWER_DATA1,
-  APB_SETUP, APB_EXECUTE, APB_DONE,
-  IDLE
+  WRITE_ADDRESS, -- Write address select
+  WRITE_DATA0, -- Write data, bit 16 to 9
+  WRITE_DATA1, -- Write data, bit 8 to 1
+  WRITE_ANSWER_HEADER, -- Write answer header for master
+  WRITE_ANSWER_OK, -- Write answer OK for master
+  READ_ADDRESS, -- Read address select
+  READ_ANSWER_HEADER, -- Read answer header for master
+  READ_ANSWER_DATA0, -- Read answer data, bit 16 to 9
+  READ_ANSWER_DATA1, -- Read answer data, bit 8 to 1
+  APB_SETUP, -- APB setup
+  APB_EXECUTE, -- APB execute
+  APB_DONE, -- APB done
+  IDLE -- Idle state
   );
 
-  signal state      : SPI_STATUS                    := IDLE;
-  signal write_flag : std_logic                     := '0';
-  signal apb_data   : std_logic_vector(15 downto 0) := (others => '0');
-  signal address    : std_logic_vector(7 downto 0)  := (others => '0');
-  signal wr_data    : std_logic_vector(15 downto 0) := (others => '0');
+  signal state      : SPI_STATUS                    := IDLE; --* State machine state
+  signal write_flag : std_logic                     := '0'; --* Write flag
+  signal apb_data   : std_logic_vector(15 downto 0) := (others => '0'); --* APB data
+  signal address    : std_logic_vector(7 downto 0)  := (others => '0'); --* Address
+  signal wr_data    : std_logic_vector(15 downto 0) := (others => '0'); --* Write data
 begin
 
-  process (clk)
+  main : process (clk)
   begin
     if rising_edge(clk) then
       case state is
@@ -164,20 +173,20 @@ begin
           null;
       end case;
       if reset = '1' then
-        state <= IDLE;
-        m_psel <= '0';
-        m_penable <= '0';
-        m_pwrite <= '0';
-        m_pwdata <= (others => '0');
-        m_paddr <= (others => '0');
-        tx_valid <= '0';
-        tx_data  <= (others => '0');
-        apb_data <= (others => '0');
-        address  <= (others => '0');
+        state      <= IDLE;
+        m_psel     <= '0';
+        m_penable  <= '0';
+        m_pwrite   <= '0';
+        m_pwdata   <= (others => '0');
+        m_paddr    <= (others => '0');
+        tx_valid   <= '0';
+        tx_data    <= (others => '0');
+        apb_data   <= (others => '0');
+        address    <= (others => '0');
         write_flag <= '0';
-        wr_data <= (others => '0');
+        wr_data    <= (others => '0');
       end if;
     end if;
-  end process;
+  end process main;
 
 end rtl;
