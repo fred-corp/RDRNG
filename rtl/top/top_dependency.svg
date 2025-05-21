@@ -9,21 +9,45 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 472)">
 <title>%0</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-472 4738.6809,-472 4738.6809,4 -4,4"/>
-<!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd -->
-<g id="node1" class="node">
-<title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd</title>
-<polygon fill="#d3d3d3" stroke="#069302" points="480.5926,-324 418.7692,-324 418.7692,-320 414.7692,-320 414.7692,-316 418.7692,-316 418.7692,-296 414.7692,-296 414.7692,-292 418.7692,-292 418.7692,-288 480.5926,-288 480.5926,-324"/>
-<polyline fill="none" stroke="#069302" points="418.7692,-320 422.7692,-320 422.7692,-316 418.7692,-316 "/>
-<polyline fill="none" stroke="#069302" points="418.7692,-296 422.7692,-296 422.7692,-292 418.7692,-292 "/>
-<text text-anchor="middle" x="449.6809" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top.vhd</text>
-</g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/config_regs/config_regs.vhd -->
-<g id="node2" class="node">
+<g id="node1" class="node">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/config_regs/config_regs.vhd</title>
 <polygon fill="#d3d3d3" stroke="#069302" points="524.9903,-252 410.3715,-252 410.3715,-248 406.3715,-248 406.3715,-244 410.3715,-244 410.3715,-224 406.3715,-224 406.3715,-220 410.3715,-220 410.3715,-216 524.9903,-216 524.9903,-252"/>
 <polyline fill="none" stroke="#069302" points="410.3715,-248 414.3715,-248 414.3715,-244 410.3715,-244 "/>
 <polyline fill="none" stroke="#069302" points="410.3715,-224 414.3715,-224 414.3715,-220 410.3715,-220 "/>
 <text text-anchor="middle" x="467.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">config_regs.vhd</text>
+</g>
+<!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/decay_sampler/decay_sampler.vhd -->
+<g id="node2" class="node">
+<title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/decay_sampler/decay_sampler.vhd</title>
+<polygon fill="#d3d3d3" stroke="#069302" points="137.5432,-252 -.1814,-252 -.1814,-248 -4.1814,-248 -4.1814,-244 -.1814,-244 -.1814,-224 -4.1814,-224 -4.1814,-220 -.1814,-220 -.1814,-216 137.5432,-216 137.5432,-252"/>
+<polyline fill="none" stroke="#069302" points="-.1814,-248 3.8186,-248 3.8186,-244 -.1814,-244 "/>
+<polyline fill="none" stroke="#069302" points="-.1814,-224 3.8186,-224 3.8186,-220 -.1814,-220 "/>
+<text text-anchor="middle" x="68.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">decay_sampler.vhd</text>
+</g>
+<!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/rand_gen/rand_gen.vhd -->
+<g id="node3" class="node">
+<title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/rand_gen/rand_gen.vhd</title>
+<polygon fill="#d3d3d3" stroke="#069302" points="256.2763,-252 155.0855,-252 155.0855,-248 151.0855,-248 151.0855,-244 155.0855,-244 155.0855,-224 151.0855,-224 151.0855,-220 155.0855,-220 155.0855,-216 256.2763,-216 256.2763,-252"/>
+<polyline fill="none" stroke="#069302" points="155.0855,-248 159.0855,-248 159.0855,-244 155.0855,-244 "/>
+<polyline fill="none" stroke="#069302" points="155.0855,-224 159.0855,-224 159.0855,-220 155.0855,-220 "/>
+<text text-anchor="middle" x="205.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">rand_gen.vhd</text>
+</g>
+<!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/spi_protocol/spi_protocol.vhd -->
+<g id="node4" class="node">
+<title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/spi_protocol/spi_protocol.vhd</title>
+<polygon fill="#d3d3d3" stroke="#069302" points="392.5967,-252 274.7651,-252 274.7651,-248 270.7651,-248 270.7651,-244 274.7651,-244 274.7651,-224 270.7651,-224 270.7651,-220 274.7651,-220 274.7651,-216 392.5967,-216 392.5967,-252"/>
+<polyline fill="none" stroke="#069302" points="274.7651,-248 278.7651,-248 278.7651,-244 274.7651,-244 "/>
+<polyline fill="none" stroke="#069302" points="274.7651,-224 278.7651,-224 278.7651,-220 274.7651,-220 "/>
+<text text-anchor="middle" x="333.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">spi_protocol.vhd</text>
+</g>
+<!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd -->
+<g id="node5" class="node">
+<title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd</title>
+<polygon fill="#d3d3d3" stroke="#069302" points="480.5926,-324 418.7692,-324 418.7692,-320 414.7692,-320 414.7692,-316 418.7692,-316 418.7692,-296 414.7692,-296 414.7692,-292 418.7692,-292 418.7692,-288 480.5926,-288 480.5926,-324"/>
+<polyline fill="none" stroke="#069302" points="418.7692,-320 422.7692,-320 422.7692,-316 418.7692,-316 "/>
+<polyline fill="none" stroke="#069302" points="418.7692,-296 422.7692,-296 422.7692,-292 418.7692,-292 "/>
+<text text-anchor="middle" x="449.6809" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">top.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/config_regs/config_regs.vhd -->
 <g id="edge6" class="edge">
@@ -31,41 +55,17 @@
 <path fill="none" stroke="#000000" d="M454.2231,-287.8314C456.1693,-280.0463 458.4877,-270.7729 460.6472,-262.1347"/>
 <polygon fill="#000000" stroke="#000000" points="464.0477,-262.9636 463.0776,-252.4133 457.2567,-261.2658 464.0477,-262.9636"/>
 </g>
-<!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/decay_sampler/decay_sampler.vhd -->
-<g id="node3" class="node">
-<title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/decay_sampler/decay_sampler.vhd</title>
-<polygon fill="#d3d3d3" stroke="#069302" points="137.5432,-252 -.1814,-252 -.1814,-248 -4.1814,-248 -4.1814,-244 -.1814,-244 -.1814,-224 -4.1814,-224 -4.1814,-220 -.1814,-220 -.1814,-216 137.5432,-216 137.5432,-252"/>
-<polyline fill="none" stroke="#069302" points="-.1814,-248 3.8186,-248 3.8186,-244 -.1814,-244 "/>
-<polyline fill="none" stroke="#069302" points="-.1814,-224 3.8186,-224 3.8186,-220 -.1814,-220 "/>
-<text text-anchor="middle" x="68.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">decay_sampler.vhd</text>
-</g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/decay_sampler/decay_sampler.vhd -->
-<g id="edge3" class="edge">
+<g id="edge1" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/decay_sampler/decay_sampler.vhd</title>
 <path fill="none" stroke="#000000" d="M418.5036,-301.0311C365.0476,-292.3888 252.2564,-273.619 147.5889,-252.3446"/>
 <polygon fill="#000000" stroke="#000000" points="147.9861,-248.8534 137.4875,-250.2782 146.5831,-255.7114 147.9861,-248.8534"/>
 </g>
-<!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/rand_gen/rand_gen.vhd -->
-<g id="node4" class="node">
-<title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/rand_gen/rand_gen.vhd</title>
-<polygon fill="#d3d3d3" stroke="#069302" points="256.2763,-252 155.0855,-252 155.0855,-248 151.0855,-248 151.0855,-244 155.0855,-244 155.0855,-224 151.0855,-224 151.0855,-220 155.0855,-220 155.0855,-216 256.2763,-216 256.2763,-252"/>
-<polyline fill="none" stroke="#069302" points="155.0855,-248 159.0855,-248 159.0855,-244 155.0855,-244 "/>
-<polyline fill="none" stroke="#069302" points="155.0855,-224 159.0855,-224 159.0855,-220 155.0855,-220 "/>
-<text text-anchor="middle" x="205.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">rand_gen.vhd</text>
-</g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/rand_gen/rand_gen.vhd -->
-<g id="edge2" class="edge">
+<g id="edge5" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/rand_gen/rand_gen.vhd</title>
 <path fill="none" stroke="#000000" d="M418.736,-296.9797C384.0158,-286.8455 325.7602,-269.8015 266.0121,-252.0904"/>
 <polygon fill="#000000" stroke="#000000" points="266.996,-248.7315 256.4135,-249.2431 265.0052,-255.4425 266.996,-248.7315"/>
-</g>
-<!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/spi_protocol/spi_protocol.vhd -->
-<g id="node5" class="node">
-<title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/spi_protocol/spi_protocol.vhd</title>
-<polygon fill="#d3d3d3" stroke="#069302" points="392.5967,-252 274.7651,-252 274.7651,-248 270.7651,-248 270.7651,-244 274.7651,-244 274.7651,-224 270.7651,-224 270.7651,-220 274.7651,-220 274.7651,-216 392.5967,-216 392.5967,-252"/>
-<polyline fill="none" stroke="#069302" points="274.7651,-248 278.7651,-248 278.7651,-244 274.7651,-244 "/>
-<polyline fill="none" stroke="#069302" points="274.7651,-224 278.7651,-224 278.7651,-220 274.7651,-220 "/>
-<text text-anchor="middle" x="333.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">spi_protocol.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/spi_protocol/spi_protocol.vhd -->
 <g id="edge4" class="edge">
@@ -82,7 +82,7 @@
 <text text-anchor="middle" x="665.6809" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_reset_gen.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_reset_gen.vhd -->
-<g id="edge5" class="edge">
+<g id="edge3" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_reset_gen.vhd</title>
 <path fill="none" stroke="#000000" d="M478.1887,-287.9436C494.5064,-277.5408 515.323,-264.1559 533.6809,-252 566.9247,-229.9872 604.4549,-204.318 630.9756,-186.0396"/>
 <polygon fill="#000000" stroke="#000000" points="633.2824,-188.7002 639.5254,-180.1401 629.3069,-182.9387 633.2824,-188.7002"/>
@@ -96,7 +96,7 @@
 <text text-anchor="middle" x="1539.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_intf_spi_slave.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_slave.vhd -->
-<g id="edge1" class="edge">
+<g id="edge2" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/rtl/top/top.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_slave.vhd</title>
 <path fill="none" stroke="#000000" d="M480.5982,-297.6607C495.3458,-294.0396 513.3066,-290.1429 529.6809,-288 933.9013,-235.1007 1044.0197,-301.1917 1452.8718,-251.9587"/>
 <polygon fill="#000000" stroke="#000000" points="1453.3909,-255.4214 1462.8934,-250.7361 1452.5431,-248.4729 1453.3909,-255.4214"/>
@@ -132,7 +132,7 @@
 <text text-anchor="middle" x="3294.6809" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_pkg_logic.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_lite_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge8" class="edge">
+<g id="edge7" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_lite_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M2901.5261,-217.6515C2904.615,-217.0782 2907.6756,-216.5252 2910.6809,-216 3009.3735,-198.7521 3123.0888,-183.3089 3201.0091,-173.4008"/>
 <polygon fill="#000000" stroke="#000000" points="3201.8022,-176.8284 3211.2834,-172.1001 3200.923,-169.8838 3201.8022,-176.8284"/>
@@ -146,7 +146,7 @@
 <text text-anchor="middle" x="2682.6809" y="-85.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_pkg_math.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_lite_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge7" class="edge">
+<g id="edge8" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_lite_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M2859.6224,-215.7767C2872.8316,-206.9077 2886.4186,-194.9055 2893.6809,-180 2900.6889,-165.6164 2903.4923,-156.6387 2893.6809,-144 2878.8214,-124.8586 2825.9509,-111.3482 2776.8557,-102.6283"/>
 <polygon fill="#000000" stroke="#000000" points="2777.2248,-99.1405 2766.7761,-100.894 2776.0378,-106.0391 2777.2248,-99.1405"/>
@@ -174,13 +174,13 @@
 <polygon fill="#000000" stroke="#000000" points="3309.588,-398.2687 3299.2045,-396.1628 3306.0085,-404.2843 3309.588,-398.2687"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_full.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge13" class="edge">
+<g id="edge11" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_full.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3389.6749,-431.8811C3388.9607,-391.048 3383.2222,-289.6588 3345.6809,-216 3340.3459,-205.5324 3332.3486,-195.6758 3324.2597,-187.3211"/>
 <polygon fill="#000000" stroke="#000000" points="3326.4735,-184.5904 3316.8791,-180.0963 3321.5768,-189.5927 3326.4735,-184.5904"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_full.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge14" class="edge">
+<g id="edge13" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_full.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M3471.2892,-445.5693C3762.6951,-429.2167 4734.6809,-369.8842 4734.6809,-306 4734.6809,-306 4734.6809,-306 4734.6809,-234 4734.6809,-166.9772 4677.0056,-165.9552 4613.6809,-144 4526.2005,-113.6698 3152.3797,-95.4804 2776.8897,-91.0585"/>
 <polygon fill="#000000" stroke="#000000" points="2776.9123,-87.5587 2766.8719,-90.941 2776.8301,-94.5582 2776.9123,-87.5587"/>
@@ -208,13 +208,13 @@
 <text text-anchor="middle" x="3585.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_wconv_n2xn.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_full.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2xn.vhd -->
-<g id="edge11" class="edge">
+<g id="edge14" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_full.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2xn.vhd</title>
 <path fill="none" stroke="#000000" d="M3406.0546,-431.9555C3440.859,-393.5997 3522.2892,-303.8602 3562.4478,-259.6038"/>
 <polygon fill="#000000" stroke="#000000" points="3565.088,-261.9027 3569.2159,-252.1451 3559.904,-257.1987 3565.088,-261.9027"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_simple.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_pkg_protocol.vhd -->
-<g id="edge16" class="edge">
+<g id="edge18" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_simple.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_pkg_protocol.vhd</title>
 <path fill="none" stroke="#000000" d="M3175.824,-369.4934C3038.8488,-354.8073 2793.039,-319.5599 2739.6809,-252 2723.1607,-231.0828 2743.3436,-205.3618 2764.2964,-186.7808"/>
 <polygon fill="#000000" stroke="#000000" points="2766.6079,-189.4099 2771.9841,-180.2804 2762.0881,-184.0646 2766.6079,-189.4099"/>
@@ -228,19 +228,19 @@
 <text text-anchor="middle" x="2139.6809" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_fifo_sync.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_simple.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_sync.vhd -->
-<g id="edge18" class="edge">
+<g id="edge16" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_simple.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_sync.vhd</title>
 <path fill="none" stroke="#000000" d="M3175.9809,-374.0451C3006.0505,-366.5016 2633.2942,-348.5919 2319.6809,-324 2290.9591,-321.7478 2259.7085,-318.7984 2231.4294,-315.9406"/>
 <polygon fill="#000000" stroke="#000000" points="2231.4588,-312.4256 2221.1554,-314.8934 2230.7489,-319.3895 2231.4588,-312.4256"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_simple.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge17" class="edge">
+<g id="edge15" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_simple.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3297.1129,-359.9601C3308.9037,-350.7801 3321.3013,-338.4872 3327.6809,-324 3347.0256,-280.0707 3340.6816,-262.2059 3327.6809,-216 3325.0148,-206.5243 3320.1728,-197.067 3315.0047,-188.7759"/>
 <polygon fill="#000000" stroke="#000000" points="3317.8112,-186.6757 3309.3561,-180.2912 3311.9843,-190.5549 3317.8112,-186.6757"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_simple.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge15" class="edge">
+<g id="edge17" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/axi/vhdl/olo_axi_master_simple.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M3361.3724,-377.2041C3660.212,-374.2645 4581.9215,-362.1335 4632.6809,-324 4671.9938,-294.4658 4677.9812,-260.3179 4656.6809,-216 4634.4908,-169.8307 4614.7704,-161.6466 4566.6809,-144 4482.0605,-112.9482 3147.0137,-95.3414 2777.0701,-91.0422"/>
 <polygon fill="#000000" stroke="#000000" points="2776.9729,-87.541 2766.9331,-90.9249 2776.8919,-94.5405 2776.9729,-87.541"/>
@@ -268,13 +268,13 @@
 <text text-anchor="middle" x="4551.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_arb_prio.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_prio.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge21" class="edge">
+<g id="edge20" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_prio.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M4472.1789,-221.3571C4456.7859,-219.2735 4440.7566,-217.3549 4425.6809,-216 3999.1012,-177.6623 3889.8686,-210.8326 3462.6809,-180 3438.4886,-178.2539 3412.3974,-175.7579 3388.1579,-173.1785"/>
 <polygon fill="#000000" stroke="#000000" points="3388.2118,-169.6641 3377.8938,-172.07 3387.4601,-176.6236 3388.2118,-169.6641"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_prio.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge20" class="edge">
+<g id="edge21" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_prio.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M4539.4366,-215.7677C4523.6787,-194.085 4494.0734,-158.9512 4458.6809,-144 4380.775,-111.0893 3132.7281,-94.9339 2776.7718,-90.9808"/>
 <polygon fill="#000000" stroke="#000000" points="2776.7936,-87.4809 2766.7555,-90.8701 2776.7162,-94.4805 2776.7936,-87.4809"/>
@@ -288,19 +288,19 @@
 <text text-anchor="middle" x="4551.6809" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_arb_rr.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_rr.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_prio.vhd -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_rr.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_prio.vhd</title>
 <path fill="none" stroke="#000000" d="M4551.6809,-287.8314C4551.6809,-280.131 4551.6809,-270.9743 4551.6809,-262.4166"/>
 <polygon fill="#000000" stroke="#000000" points="4555.181,-262.4132 4551.6809,-252.4133 4548.181,-262.4133 4555.181,-262.4132"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_rr.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge24" class="edge">
+<g id="edge22" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_rr.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M4479.4901,-303.607C4247.118,-295.7392 3530.9248,-270.1384 3484.6809,-252 3461.4774,-242.8988 3463.2546,-228.4824 3441.6809,-216 3418.8281,-202.7775 3392.1606,-191.8161 3367.8608,-183.3032"/>
 <polygon fill="#000000" stroke="#000000" points="3368.9181,-179.9658 3358.3235,-180.0429 3366.6538,-186.5895 3368.9181,-179.9658"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_rr.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_arb_rr.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M4599.6729,-287.9585C4615.2771,-279.5363 4630.8396,-267.7985 4639.6809,-252 4647.4946,-238.0377 4648.0736,-229.6221 4639.6809,-216 4602.3561,-155.4181 4565.6591,-161.4735 4496.6809,-144 4329.7717,-101.7187 3125.2856,-92.2717 2776.859,-90.4137"/>
 <polygon fill="#000000" stroke="#000000" points="2776.8204,-86.9135 2766.8022,-90.3609 2776.7836,-93.9134 2776.8204,-86.9135"/>
@@ -328,13 +328,13 @@
 <polygon fill="#000000" stroke="#000000" points="4044.1918,-258.1424 4052.883,-252.0831 4042.3102,-251.4 4044.1918,-258.1424"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cam.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge27" class="edge">
+<g id="edge25" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cam.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3792.6157,-301.2637C3693.1965,-293.5457 3511.9621,-276.606 3451.6809,-252 3426.9918,-241.9222 3426.3907,-229.9778 3403.6809,-216 3384.9794,-204.4893 3363.4867,-193.4202 3344.5559,-184.3331"/>
 <polygon fill="#000000" stroke="#000000" points="3346.0275,-181.1574 3335.4919,-180.0381 3343.03,-187.4831 3346.0275,-181.1574"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cam.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge25" class="edge">
+<g id="edge27" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cam.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M3926.452,-304.5651C4068.9571,-300.8113 4392.6462,-288.3364 4425.6809,-252 4436.4439,-240.1612 4435.8814,-228.3268 4425.6809,-216 4316.6503,-84.2414 4217.5936,-163.4339 4047.6809,-144 3800.7949,-115.7623 3043.4581,-97.5704 2776.7859,-91.899"/>
 <polygon fill="#000000" stroke="#000000" points="2776.8162,-88.3989 2766.7443,-91.6864 2776.668,-95.3973 2776.8162,-88.3989"/>
@@ -434,13 +434,13 @@
 <polygon fill="#000000" stroke="#000000" points="745.601,-259.0016 753.5859,-252.038 743.0013,-252.5023 745.601,-259.0016"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_pulse.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_bits.vhd -->
-<g id="edge33" class="edge">
+<g id="edge34" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_pulse.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_bits.vhd</title>
 <path fill="none" stroke="#000000" d="M962.9024,-287.7623C946.7604,-262.7682 917.6489,-217.6924 899.0156,-188.8409"/>
 <polygon fill="#000000" stroke="#000000" points="901.7292,-186.5912 893.3638,-180.0896 895.8489,-190.3889 901.7292,-186.5912"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_pulse.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_reset.vhd -->
-<g id="edge34" class="edge">
+<g id="edge33" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_pulse.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_reset.vhd</title>
 <path fill="none" stroke="#000000" d="M930.2687,-287.8314C906.5205,-278.1162 877.1063,-266.0831 852.1145,-255.8592"/>
 <polygon fill="#000000" stroke="#000000" points="853.3545,-252.585 842.7738,-252.038 850.704,-259.0638 853.3545,-252.585"/>
@@ -512,25 +512,25 @@
 <text text-anchor="middle" x="3184.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_crc.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_crc.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge43" class="edge">
+<g id="edge42" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_crc.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3212.4385,-215.8314C3226.3779,-206.7074 3243.4407,-195.539 3258.404,-185.7449"/>
 <polygon fill="#000000" stroke="#000000" points="3260.4819,-188.5679 3266.9321,-180.1628 3256.6483,-182.711 3260.4819,-188.5679"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_crc.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge42" class="edge">
+<g id="edge43" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_crc.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M3143.606,-215.9691C3097.0678,-196.1003 3018.5912,-164.2779 2948.6809,-144 2892.463,-127.6937 2828.1732,-114.4978 2776.8813,-105.2331"/>
 <polygon fill="#000000" stroke="#000000" points="2777.2621,-101.7458 2766.8025,-103.4328 2776.0312,-108.6367 2777.2621,-101.7458"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_decode_firstbit.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge45" class="edge">
+<g id="edge44" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_decode_firstbit.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M4018.5699,-217.0885C4015.5759,-216.7036 4012.6076,-216.3394 4009.6809,-216 3767.6653,-187.9385 3705.4128,-200.9821 3462.6809,-180 3438.5158,-177.9111 3412.4342,-175.2938 3388.1952,-172.7072"/>
 <polygon fill="#000000" stroke="#000000" points="3388.2481,-169.1928 3377.9309,-171.6022 3387.4988,-176.1526 3388.2481,-169.1928"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_decode_firstbit.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge44" class="edge">
+<g id="edge45" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_decode_firstbit.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M4079.8745,-215.8793C4032.805,-194.3092 3949.36,-159.2889 3873.6809,-144 3664.6688,-101.7748 3020.5996,-92.5392 2777.1742,-90.5426"/>
 <polygon fill="#000000" stroke="#000000" points="2776.9629,-87.0409 2766.9353,-90.461 2776.9071,-94.0407 2776.9629,-87.0409"/>
@@ -590,13 +590,13 @@
 <text text-anchor="middle" x="3772.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_dyn_sft.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_dyn_sft.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge52" class="edge">
+<g id="edge51" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_dyn_sft.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3696.3012,-217.7264C3693.0544,-217.1254 3689.8372,-216.547 3686.6809,-216 3657.9104,-211.0137 3494.4587,-188.8332 3387.9052,-174.4959"/>
 <polygon fill="#000000" stroke="#000000" points="3388.155,-170.998 3377.7776,-173.1337 3387.2218,-177.9356 3388.155,-170.998"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_dyn_sft.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge51" class="edge">
+<g id="edge52" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_dyn_sft.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M3696.2852,-217.8159C3693.0427,-217.1904 3689.8309,-216.5824 3686.6809,-216 3587.5285,-197.6665 3553.9118,-222.9445 3462.6809,-180 3440.7404,-169.6721 3444.047,-153.3706 3421.6809,-144 3363.647,-119.6858 2962.6753,-100.9953 2776.8493,-93.5344"/>
 <polygon fill="#000000" stroke="#000000" points="2776.946,-90.0355 2766.8144,-93.134 2776.6669,-97.03 2776.946,-90.0355"/>
@@ -610,7 +610,7 @@
 <text text-anchor="middle" x="1917.6809" y="-301.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_fifo_async.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_async.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_bits.vhd -->
-<g id="edge57" class="edge">
+<g id="edge54" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_async.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_bits.vhd</title>
 <path fill="none" stroke="#000000" d="M1832.2647,-297.4232C1798.4693,-294.2002 1759.2662,-290.6733 1723.6809,-288 1445.782,-267.1235 1369.2687,-314.4794 1097.6809,-252 1034.6085,-237.4901 966.3875,-206.1855 923.8516,-184.6083"/>
 <polygon fill="#000000" stroke="#000000" points="925.4108,-181.4745 914.9154,-180.0262 922.2169,-187.7034 925.4108,-181.4745"/>
@@ -634,7 +634,7 @@
 <polygon fill="#000000" stroke="#000000" points="2588.6177,-96.4397 2598.4752,-92.5565 2588.3477,-89.4449 2588.6177,-96.4397"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_async.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_ram_sdp.vhd -->
-<g id="edge54" class="edge">
+<g id="edge57" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_async.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_ram_sdp.vhd</title>
 <path fill="none" stroke="#000000" d="M1973.4143,-287.9243C2004.0269,-277.9959 2042.169,-265.6255 2074.1964,-255.2382"/>
 <polygon fill="#000000" stroke="#000000" points="2075.4921,-258.4975 2083.9245,-252.0831 2073.3325,-251.839 2075.4921,-258.4975"/>
@@ -654,13 +654,13 @@
 <polygon fill="#000000" stroke="#000000" points="2073.4176,-330.4109 2081.9153,-324.0831 2071.3263,-323.7305 2073.4176,-330.4109"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_packet.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge60" class="edge">
+<g id="edge58" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_packet.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M1996.9918,-361.1954C1999.9196,-360.7705 2002.8221,-360.3701 2005.6809,-360 2225.7549,-331.5066 2282.5176,-342.1996 2503.6809,-324 2677.1647,-309.724 3158.7882,-373.2529 3283.6809,-252 3299.7644,-236.3852 3301.3581,-210.2929 3299.6057,-190.2117"/>
 <polygon fill="#000000" stroke="#000000" points="3303.0554,-189.5806 3298.4013,-180.0627 3296.1042,-190.4056 3303.0554,-189.5806"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_packet.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge58" class="edge">
+<g id="edge60" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_fifo_packet.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M1822.4199,-370.8167C1622.431,-353.4723 1144.5259,-306.6746 1097.6809,-252 1087.2707,-239.8498 1088.5451,-229.1353 1097.6809,-216 1150.1941,-140.4974 1201.4925,-162.009 1291.6809,-144 1417.7932,-118.8177 2295.8033,-98.1804 2588.1986,-91.9389"/>
 <polygon fill="#000000" stroke="#000000" points="2588.4275,-95.4349 2598.3508,-91.723 2588.2786,-88.4365 2588.4275,-95.4349"/>
@@ -746,13 +746,13 @@
 <text text-anchor="middle" x="3933.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_prbs.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_prbs.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge70" class="edge">
+<g id="edge69" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_prbs.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3866.2358,-217.5026C3863.3519,-216.9629 3860.4912,-216.4585 3857.6809,-216 3683.698,-187.6151 3638.1042,-197.3905 3462.6809,-180 3438.544,-177.6072 3412.4724,-174.8822 3388.234,-172.2893"/>
 <polygon fill="#000000" stroke="#000000" points="3388.2858,-168.7749 3377.9694,-171.1875 3387.5387,-175.7349 3388.2858,-168.7749"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_prbs.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge69" class="edge">
+<g id="edge70" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_prbs.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M3920.3247,-215.8455C3903.2256,-194.2413 3871.3833,-159.1867 3834.6809,-144 3738.2621,-104.1039 3034.9702,-93.3759 2777.1149,-90.7674"/>
 <polygon fill="#000000" stroke="#000000" points="2777.0556,-87.2668 2767.0213,-90.6672 2776.986,-94.2664 2777.0556,-87.2668"/>
@@ -890,25 +890,25 @@
 <text text-anchor="middle" x="4325.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_wconv_n2m.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2m.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge86" class="edge">
+<g id="edge85" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2m.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M4234.7369,-217.1088C4231.6858,-216.7086 4228.6607,-216.337 4225.6809,-216 3888.3432,-177.8476 3801.1649,-206.095 3462.6809,-180 3438.4974,-178.1356 3412.4093,-175.5977 3388.17,-173.0159"/>
 <polygon fill="#000000" stroke="#000000" points="3388.2236,-169.5014 3377.9058,-171.9085 3387.4727,-176.4611 3388.2236,-169.5014"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2m.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge85" class="edge">
+<g id="edge86" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2m.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M4265.3134,-215.9926C4190.7443,-194.6231 4059.6401,-159.8915 3944.6809,-144 3719.3041,-112.8447 3030.1752,-96.7179 2777.1431,-91.7255"/>
 <polygon fill="#000000" stroke="#000000" points="2776.9414,-88.221 2766.8748,-91.5243 2776.8042,-95.2197 2776.9414,-88.221"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2xn.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge88" class="edge">
+<g id="edge87" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2xn.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3512.6249,-215.9243C3471.4682,-205.7412 3419.929,-192.9892 3377.3039,-182.4428"/>
 <polygon fill="#000000" stroke="#000000" points="3378.0624,-179.025 3367.5145,-180.0207 3376.3811,-185.8201 3378.0624,-179.025"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2xn.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge87" class="edge">
+<g id="edge88" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_n2xn.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M3516.1681,-215.8912C3488.2944,-207.1313 3456.4922,-195.1783 3429.6809,-180 3407.9909,-167.7209 3409.7642,-153.4019 3386.6809,-144 3331.6254,-121.5756 2955.7793,-102.1294 2776.9135,-94.0236"/>
 <polygon fill="#000000" stroke="#000000" points="2776.8707,-90.5183 2766.7232,-93.5645 2776.5555,-97.5112 2776.8707,-90.5183"/>
@@ -922,13 +922,13 @@
 <text text-anchor="middle" x="3011.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_base_wconv_xn2n.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_xn2n.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge90" class="edge">
+<g id="edge89" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_xn2n.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M3082.7285,-215.9243C3122.5937,-205.7819 3172.4754,-193.0912 3213.8316,-182.5694"/>
 <polygon fill="#000000" stroke="#000000" points="3214.7758,-185.9408 3223.6041,-180.0831 3213.0498,-179.1569 3214.7758,-185.9408"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_xn2n.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge89" class="edge">
+<g id="edge90" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_wconv_xn2n.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M2996.4874,-215.8688C2978.2365,-195.2914 2945.6752,-162.2279 2910.6809,-144 2869.432,-122.5142 2819.5496,-109.449 2776.9732,-101.5686"/>
 <polygon fill="#000000" stroke="#000000" points="2777.3412,-98.0792 2766.8824,-99.7716 2776.1139,-104.9707 2777.3412,-98.0792"/>
@@ -948,13 +948,13 @@
 <polygon fill="#000000" stroke="#000000" points="1066.4761,-319.8828 1056.016,-321.5673 1065.2435,-326.7735 1066.4761,-319.8828"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_clk_meas.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_simple.vhd -->
-<g id="edge93" class="edge">
+<g id="edge91" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_clk_meas.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_cc_simple.vhd</title>
 <path fill="none" stroke="#000000" d="M1994.1049,-444.9084C1798.0904,-432.0433 1283.369,-398.2603 1069.7336,-384.2386"/>
 <polygon fill="#000000" stroke="#000000" points="1069.6902,-380.7284 1059.4824,-383.5658 1069.2317,-387.7133 1069.6902,-380.7284"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_clk_meas.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge91" class="edge">
+<g id="edge93" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_clk_meas.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M2149.0645,-447.89C2313.476,-441.3026 2682.6809,-414.4377 2682.6809,-306 2682.6809,-306 2682.6809,-306 2682.6809,-234 2682.6809,-193.876 2682.6809,-147.4631 2682.6809,-118.4177"/>
 <polygon fill="#000000" stroke="#000000" points="2686.181,-118.1853 2682.6809,-108.1854 2679.181,-118.1854 2686.181,-118.1853"/>
@@ -974,13 +974,13 @@
 <text text-anchor="middle" x="1184.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_intf_debounce.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_debounce.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_array.vhd -->
-<g id="edge95" class="edge">
+<g id="edge97" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_debounce.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_array.vhd</title>
 <path fill="none" stroke="#000000" d="M1106.2263,-228.4641C942.8839,-216.7552 580.6155,-189.7563 571.6809,-180 560.875,-168.2003 561.2747,-156.1536 571.6809,-144 631.595,-74.0254 1257.0068,-35.0987 1499.4192,-22.5459"/>
 <polygon fill="#000000" stroke="#000000" points="1499.8179,-26.0302 1509.6251,-22.0213 1499.4585,-19.0394 1499.8179,-26.0302"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_debounce.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_strobe_gen.vhd -->
-<g id="edge96" class="edge">
+<g id="edge95" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_debounce.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_strobe_gen.vhd</title>
 <path fill="none" stroke="#000000" d="M1263.3109,-217.1723C1266.1307,-216.7472 1268.9272,-216.354 1271.6809,-216 1578.8998,-176.5073 1658.4286,-197.4967 1967.6809,-180 2032.3617,-176.3405 2105.0511,-171.8771 2161.8478,-168.3105"/>
 <polygon fill="#000000" stroke="#000000" points="2162.1407,-171.7991 2171.9012,-167.6781 2161.7012,-164.8129 2162.1407,-171.7991"/>
@@ -994,7 +994,7 @@
 <text text-anchor="middle" x="1362.6809" y="-157.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_intf_sync.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_debounce.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_sync.vhd -->
-<g id="edge97" class="edge">
+<g id="edge96" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_debounce.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_sync.vhd</title>
 <path fill="none" stroke="#000000" d="M1229.5978,-215.8314C1253.6159,-206.1162 1283.3643,-194.0831 1308.6401,-183.8592"/>
 <polygon fill="#000000" stroke="#000000" points="1310.1291,-187.0325 1318.087,-180.038 1307.5042,-180.5432 1310.1291,-187.0325"/>
@@ -1014,19 +1014,19 @@
 <polygon fill="#000000" stroke="#000000" points="1175.3859,-110.5115 1165.0715,-108.0896 1171.6243,-116.415 1175.3859,-110.5115"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_i2c_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge100" class="edge">
+<g id="edge99" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_i2c_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M1444.9235,-217.0806C1447.8736,-216.6814 1450.7996,-216.3186 1453.6809,-216 1771.8414,-180.816 2573.7761,-191.1776 2893.6809,-180 2999.0407,-176.3187 3119.9102,-170.7025 3201.1667,-166.7238"/>
 <polygon fill="#000000" stroke="#000000" points="3201.5547,-170.209 3211.3709,-166.2225 3201.2112,-163.2174 3201.5547,-170.209"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_i2c_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge99" class="edge">
+<g id="edge101" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_i2c_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M1396.0586,-215.8798C1437.6725,-194.3102 1511.6348,-159.2905 1579.6809,-144 1770.5651,-101.1069 2358.1324,-92.284 2588.5658,-90.4696"/>
 <polygon fill="#000000" stroke="#000000" points="2588.6305,-93.9693 2598.6036,-90.3932 2588.5772,-86.9695 2588.6305,-93.9693"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_i2c_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_sync.vhd -->
-<g id="edge101" class="edge">
+<g id="edge100" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_i2c_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_sync.vhd</title>
 <path fill="none" stroke="#000000" d="M1362.6809,-215.8314C1362.6809,-208.131 1362.6809,-198.9743 1362.6809,-190.4166"/>
 <polygon fill="#000000" stroke="#000000" points="1366.181,-190.4132 1362.6809,-180.4133 1359.181,-190.4133 1366.181,-190.4132"/>
@@ -1046,31 +1046,31 @@
 <polygon fill="#000000" stroke="#000000" points="1240.8933,-88.9981 1230.809,-92.2473 1240.7185,-95.9959 1240.8933,-88.9981"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge104" class="edge">
+<g id="edge103" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M2654.631,-224.9957C2681.7029,-222.0669 2711.9774,-218.8407 2739.6809,-216 2901.9439,-199.3619 3091.0304,-181.2333 3201.3428,-170.7834"/>
 <polygon fill="#000000" stroke="#000000" points="3201.815,-174.2545 3211.4406,-169.8275 3201.1552,-167.2856 3201.815,-174.2545"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge103" class="edge">
+<g id="edge104" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_master.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M2586.6125,-215.7623C2605.8705,-190.5518 2640.7355,-144.9103 2662.7471,-116.0952"/>
 <polygon fill="#000000" stroke="#000000" points="2665.5734,-118.161 2668.8624,-108.0896 2660.0106,-113.9117 2665.5734,-118.161"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge106" class="edge">
+<g id="edge105" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M1616.5817,-221.4355C1632.1348,-219.2898 1648.4024,-217.3281 1663.6809,-216 2208.5271,-168.6392 2347.1556,-200.2628 2893.6809,-180 2999.0326,-176.094 3119.9036,-170.5187 3201.1626,-166.611"/>
 <polygon fill="#000000" stroke="#000000" points="3201.5474,-170.0966 3211.3672,-166.119 3201.2102,-163.1047 3201.5474,-170.0966"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge105" class="edge">
+<g id="edge107" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M1551.6186,-215.8962C1566.9939,-194.3431 1595.9185,-159.34 1630.6809,-144 1716.9156,-105.9462 2346.5326,-94.1621 2588.4031,-91.0162"/>
 <polygon fill="#000000" stroke="#000000" points="2588.6284,-94.5137 2598.5827,-90.8859 2588.5387,-87.5143 2588.6284,-94.5137"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_sync.vhd -->
-<g id="edge107" class="edge">
+<g id="edge106" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_spi_slave.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_sync.vhd</title>
 <path fill="none" stroke="#000000" d="M1495.0163,-215.8314C1471.1332,-206.1162 1441.5519,-194.0831 1416.4181,-183.8592"/>
 <polygon fill="#000000" stroke="#000000" points="1417.6061,-180.564 1407.0243,-180.038 1414.9684,-187.0481 1417.6061,-180.564"/>
@@ -1090,13 +1090,13 @@
 <text text-anchor="middle" x="2336.6809" y="-229.8" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#000000">olo_intf_uart.vhd</text>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_uart.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd -->
-<g id="edge111" class="edge">
+<g id="edge109" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_uart.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_logic.vhd</title>
 <path fill="none" stroke="#000000" d="M2396.5615,-225.7859C2422.6671,-222.407 2453.6504,-218.6685 2481.6809,-216 2741.853,-191.2314 3049.9436,-174.0879 3201.2769,-166.4641"/>
 <polygon fill="#000000" stroke="#000000" points="3201.6456,-169.9501 3211.4577,-165.9537 3201.295,-162.9589 3201.6456,-169.9501"/>
 </g>
 <!-- /Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_uart.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd -->
-<g id="edge109" class="edge">
+<g id="edge111" class="edge">
 <title>/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/intf/vhdl/olo_intf_uart.vhd&#45;&gt;/Users/fredericdruppel/Documents/ECAM/2024&#45;2025/1MEO/Q2/ME4C_Microelectronics/project/RD&#45;RNG/open&#45;logic/src/base/vhdl/olo_base_pkg_math.vhd</title>
 <path fill="none" stroke="#000000" d="M2346.3479,-215.9646C2358.4934,-195.1553 2381.3471,-161.5563 2410.6809,-144 2440.2981,-126.2741 2522.0712,-111.4639 2588.282,-101.8643"/>
 <polygon fill="#000000" stroke="#000000" points="2588.9416,-105.3057 2598.3465,-100.4275 2587.9522,-98.376 2588.9416,-105.3057"/>

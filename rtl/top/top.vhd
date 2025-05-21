@@ -248,6 +248,9 @@ begin
   end process main;
   ----------------------------------------
 
+  -- *** Mapped outputs ***
+  rng_bits_output <= random_number(7 downto 0); -- Random number output bits 8 to 1
+
   -- *** LED drivers ***
   led_r <= '0' when led_out_r = '1' else
     'Z';
