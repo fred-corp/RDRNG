@@ -60,7 +60,7 @@
 | ds_output_valid    | std_logic                                     | Output valid signal                      |
 | ds_output          | std_logic_vector(rng_output_len - 1 downto 0) | Output random number signal              |
 | s_ds_output        | std_logic_vector(rng_output_len - 1 downto 0) | Buffered output random number signal     |
-| random_number      | std_logic_vector(rng_output_len - 1 downto 0) |                                          |
+| random_number      | std_logic_vector(rng_output_len - 1 downto 0) | Random number signal                     |
 
 ## Constants
 
@@ -80,3 +80,11 @@
 - config_regs_inst: work.config_regs
 - rng_inst: work.rand_gen
 - decay_sampler_inst: work.decay_sampler
+
+## Dependency diagram
+
+![Dependency diagram](top_dependency.svg "Dependency diagram")
+
+## Schematic
+
+![Schematic](top_schematic.svg "Schematic")
