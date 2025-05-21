@@ -9,29 +9,29 @@ use ieee.numeric_std.all;
 
 entity top is
   port (
-    clk  : in std_logic;
-    rstn : in std_logic;
+    clk  : in std_logic; --* Clock input
+    rstn : in std_logic; --* Active low reset input
 
-    rng_bits_output : out std_logic_vector(7 downto 0);
+    rng_bits_output : out std_logic_vector(7 downto 0); --* Random number output bits 8 to 1
     -- SPI interface
-    spi_sck  : in std_logic;
-    spi_mosi : in std_logic;
-    spi_miso : out std_logic;
-    spi_cs   : in std_logic;
+    spi_sck  : in std_logic; --* SPI clock
+    spi_mosi : in std_logic; --* SPI MOSI
+    spi_miso : out std_logic; --* SPI MISO
+    spi_cs   : in std_logic; --* SPI chip select
 
     -- Inputs
-    pulse_input : in std_logic;
+    pulse_input : in std_logic; --* Pulse input
 
     -- Outputs
-    led_r : out std_logic;
-    led_g : out std_logic;
-    led_b : out std_logic
+    led_r : out std_logic; --* Red LED
+    led_g : out std_logic; --* Green LED
+    led_b : out std_logic --* Blue LED
   );
 end entity top;
 
 architecture rtl of top is
   -- Reset
-  signal reset : std_logic;
+  signal reset : std_logic; --* Reset signal
 
   -- SPI
   signal spi_tx_valid      : std_logic := '0'; --* SPI transmitter valid
@@ -45,41 +45,41 @@ architecture rtl of top is
   signal spi_resp_cleanend : std_logic; --* SPI response clean end flag
 
   -- APB
-  signal apb_paddr   : std_logic_vector(7 downto 0);
-  signal apb_psel    : std_logic;
-  signal apb_penable : std_logic;
-  signal apb_pwrite  : std_logic;
-  signal apb_pwdata  : std_logic_vector(15 downto 0);
-  signal apb_prdata  : std_logic_vector(15 downto 0);
+  signal apb_paddr   : std_logic_vector(7 downto 0); --* APB address
+  signal apb_psel    : std_logic; --* APB select
+  signal apb_penable : std_logic; --* APB enable
+  signal apb_pwrite  : std_logic; --* APB write
+  signal apb_pwdata  : std_logic_vector(15 downto 0); --* APB write data
+  signal apb_prdata  : std_logic_vector(15 downto 0); --* APB read data
 
   -- LEDs
-  signal led_out_r : std_logic := '0';
-  signal led_out_g : std_logic := '0';
-  signal led_out_b : std_logic := '0';
+  signal led_out_r : std_logic := '0'; --* Red LED signal
+  signal led_out_g : std_logic := '0'; --* Green LED signal
+  signal led_out_b : std_logic := '0'; --* Blue LED signal
 
   -- config regs signals
-  signal cr_mode            : std_logic                     := '0';
-  signal cr_seed            : std_logic_vector(15 downto 0) := x"0000";
-  signal cr_custom_seed     : std_logic_vector(15 downto 0) := x"0000";
-  signal cr_is_custom_seed  : std_logic                     := '0';
-  signal cr_generate_seed   : std_logic                     := '0';
-  signal cr_generate_number : std_logic                     := '0';
+  signal cr_mode            : std_logic                     := '0'; --* Mode select (0: decay sampling, 1: LFSR)
+  signal cr_seed            : std_logic_vector(15 downto 0) := x"0000"; --* Seed value
+  signal cr_custom_seed     : std_logic_vector(15 downto 0) := x"0000"; --* Custom seed value
+  signal cr_is_custom_seed  : std_logic                     := '0'; --* Custom seed flag
+  signal cr_generate_seed   : std_logic                     := '0'; --* Generate seed flag
+  signal cr_generate_number : std_logic                     := '0'; --* Generate number flag
 
   -- RNG
-  constant rng_output_len  : integer                                       := 16;
-  signal rng_seed          : std_logic_vector(rng_output_len - 1 downto 0) := x"1234";
-  signal rng_output        : std_logic_vector(rng_output_len - 1 downto 0);
-  signal rng_gen_new_num   : std_logic                    := '0';
-  signal rng_load_new_seed : std_logic                    := '0';
-  signal rng_polynomial    : std_logic_vector(1 downto 0) := (others => '0');
+  constant rng_output_len  : integer                                       := 16; --* Output length in bits
+  signal rng_seed          : std_logic_vector(rng_output_len - 1 downto 0) := x"1234"; --* Seed value
+  signal rng_output        : std_logic_vector(rng_output_len - 1 downto 0); --* Random number output
+  signal rng_gen_new_num   : std_logic                    := '0'; --* Generate new number flag
+  signal rng_load_new_seed : std_logic                    := '0'; --* Load new seed flag
+  signal rng_polynomial    : std_logic_vector(1 downto 0) := (others => '0'); --* Polynomial selection
 
   -- Decay sampling
   signal ds_output_valid : std_logic                                     := '0'; --* Output valid signal
-  signal ds_output       : std_logic_vector(rng_output_len - 1 downto 0) := (others => '0'); --* Output random number
-  signal s_ds_output     : std_logic_vector(rng_output_len - 1 downto 0) := (others => '0'); --* Buffered output random number
+  signal ds_output       : std_logic_vector(rng_output_len - 1 downto 0) := (others => '0'); --* Output random number signal
+  signal s_ds_output     : std_logic_vector(rng_output_len - 1 downto 0) := (others => '0'); --* Buffered output random number signal
 
   -- Mapped outputs
-  signal random_number : std_logic_vector(rng_output_len - 1 downto 0);
+  signal random_number : std_logic_vector(rng_output_len - 1 downto 0); --* Random number signal
 
 begin
   -- *** Reset resynchronization ***
@@ -209,7 +209,7 @@ begin
       output       => ds_output --* Output random number
     );
 
-  process (clk)
+  main : process (clk)
   begin
     if rising_edge(clk) then
       -- check mode
@@ -245,7 +245,7 @@ begin
         random_number <= (others => '0');
       end if;
     end if;
-  end process;
+  end process main;
   ----------------------------------------
 
   -- *** LED drivers ***
