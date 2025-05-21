@@ -37,9 +37,9 @@ entity config_regs is
     generate_number   : out std_logic; --* Generate new random number
 
     -- LEDs
-    led_r : out std_logic;
-    led_g : out std_logic;
-    led_b : out std_logic
+    led_r : out std_logic; --* LED red
+    led_g : out std_logic; --* LED green
+    led_b : out std_logic --* LED blue
   );
 end entity config_regs;
 
@@ -51,9 +51,9 @@ architecture rtl of config_regs is
   signal s_generate_number   : std_logic                     := '0'; --* Generate new random number
   signal s_choose_polynomial : std_logic_vector(1 downto 0)  := (others => '0'); --* Polynomial selection for LFSR
 
-  signal s_led_r : std_logic := '0';
-  signal s_led_g : std_logic := '0';
-  signal s_led_b : std_logic := '0';
+  signal s_led_r : std_logic := '0'; --* LED red signal
+  signal s_led_g : std_logic := '0'; --* LED green signal
+  signal s_led_b : std_logic := '0'; --* LED blue signal
 
 begin
   main : process (clk)
