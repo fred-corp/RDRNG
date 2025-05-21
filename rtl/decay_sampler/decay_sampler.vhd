@@ -15,8 +15,8 @@ entity decay_sampler is
     output_width  : integer := 16 --* Output width in bits
   );
   port (
-    clk   : in std_logic;
-    reset : in std_logic;
+    clk   : in std_logic; --* Clock signal
+    reset : in std_logic; --* Reset signal
 
     -- Inputs
     pulse : in std_logic; --* Pulses from the radioactive decay sensor
@@ -27,11 +27,11 @@ entity decay_sampler is
 end entity;
 
 architecture rtl of decay_sampler is
-  signal counter_width : integer                                     := integer(ceil(log2(real(clk_freq))));
-  signal counter       : unsigned(counter_width downto 0)            := (others => '0'); --* Counter for clock cycles
-  signal s_output      : std_logic_vector(output_width - 1 downto 0) := (others => '0');
-  signal s_pulse       : std_logic                                   := '0'; --* Pulse signal
-  signal s_pulse_prev  : std_logic                                   := '0'; --* Previous pulse signal
+  constant counter_width : integer                                     := integer(ceil(log2(real(clk_freq)))); --* Counter width in bits
+  signal counter         : unsigned(counter_width downto 0)            := (others => '0'); --* Counter for clock cycles
+  signal s_output        : std_logic_vector(output_width - 1 downto 0) := (others => '0'); --* Output random number signal
+  signal s_pulse         : std_logic                                   := '0'; --* Pulse signal
+  signal s_pulse_prev    : std_logic                                   := '0'; --* Previous pulse signal
 
 begin
 
