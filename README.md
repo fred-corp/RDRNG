@@ -13,7 +13,6 @@
 In this mode, randomness is derived directly from the stochastic nature of radioactive decay events. The system samples the timestamps of two successive decay pulses and computes the time interval between them. This interval is then converted to a 16-bit value, providing a true random number based on quantum processes.
 This method yields lower throughput compared to the LFSR mode but provides high-entropy outputs, making it suitable for cryptographic seeding or applications where unpredictability is paramount.
 
-
 ### LFSR
 
 LFSR-Based Generation
@@ -29,7 +28,6 @@ The seed value for the LFSR can be:
 * Automatically sampled from radioactive decay pulses (see Seed Generation section), introducing true entropy into the pseudo-random sequence and enabling initialization with unpredictable values.
 
 This mode allows high-speed random number generation suitable for scenarios where throughput is critical and statistical randomness is sufficient.
-
 
 ## SPI Command Set
 
