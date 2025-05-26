@@ -79,6 +79,7 @@ begin
             elsif s_paddr = x"01" then
               s_custom_seed <= s_pwdata;
               s_is_custom_seed <= '1';
+              s_generate_seed <= '1';
               -- Set seed from Radioactive Decay Pulses
             elsif s_paddr = x"02" then
               s_generate_seed <= '1';

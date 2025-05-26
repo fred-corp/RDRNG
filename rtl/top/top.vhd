@@ -97,7 +97,8 @@ begin
   -- *** SPI slave interface ***
   spi_slave_inst : entity work.olo_intf_spi_slave
     generic map(
-      TransWidth_g => positive(8)
+      TransWidth_g              => positive(8),
+      ConsecutiveTransactions_g => true --* Consecutive transactions
     )
     port map
     (

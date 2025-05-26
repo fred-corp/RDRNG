@@ -76,10 +76,10 @@ begin
       case state is
         when IDLE =>
           if rx_valid = '1' then
-            if rx_data = x"AA" then
+            if (rx_data or "01111111") = "01111111" then
               state      <= WRITE_ADDRESS;
               write_flag <= '1';
-            elsif rx_data = x"55" then
+            elsif (rx_data and "10000000") = "10000000" then
               state      <= READ_ADDRESS;
               write_flag <= '0';
             else
@@ -101,6 +101,7 @@ begin
           if rx_valid = '1' then
             state <= APB_SETUP;
           end if;
+
         when WRITE_ANSWER_HEADER =>
           tx_data  <= x"AA";
           tx_valid <= '1';
@@ -165,7 +166,8 @@ begin
         when APB_DONE =>
           m_psel <= '0';
           if write_flag = '1' then
-            state <= WRITE_ANSWER_HEADER;
+            state <= IDLE;
+            -- state <= WRITE_ANSWER_HEADER;
           elsif write_flag = '0' then
             state <= READ_ANSWER_HEADER;
           end if;
