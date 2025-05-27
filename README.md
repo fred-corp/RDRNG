@@ -31,29 +31,43 @@ This mode allows high-speed random number generation suitable for scenarios wher
 
 ## SPI Command Set
 
-### `0xAA` - Write to register
+### Write to register
 
-![Read sequence](https://svg.wavedrom.com/github/fred-corp/RDRNG/main/docs/spi-write_wave.json)
+![Write sequence](https://svg.wavedrom.com/github/fred-corp/RDRNG/main/docs/spi-write_wave.json)
 
-Data to be written to the register should always be 2 bytes long.
+Transaction is 32 bits long, divided into 4 bytes :
+
+* First byte : MSB indicates wether the transaction is a write (`0`) operation
+* Second byte : register address
+* Third byte : register value MSB
+* Fourth byte : register value LSB
 
 | Address | Description                                                                       | Example Complete command |
 | ------- | --------------------------------------------------------------------------------- | ------------------------ |
-| `0x00`  | Set random number generator mode (last bit, `1` for LFSR, `0` for decay sampling) | `0xAA 0x00 0x00 0x01`    |
-| `0x01`  | Set manual seed (2 bytes unsigned) for LFSR                                       | `0xAA 0x01 0xBE 0xEF`    |
-| `0x02`  | Generate seed from radioactive decay pulses (DNC) for LFSR                        | `0xAA 0x02 0x00 0x00`    |
-| `0x03`  | Choose LFSR Polynomial (2 last bits, see [LFSR for info](#lfsr))                  | `0xAA 0x03 0x00 0x02`    |
+| `0x00`  | Set random number generator mode (last bit, `1` for LFSR, `0` for decay sampling) | `0x00000001`             |
+| `0x01`  | Set manual seed (2 bytes unsigned) for LFSR                                       | `0x0001BEEF`             |
+| `0x02`  | Generate seed from radioactive decay pulses (DNC) for LFSR                        | `0x00020000`             |
+| `0x03`  | Choose LFSR Polynomial (2 last bits, see [LFSR for info](#lfsr))                  | `0x00030002`             |
 
-### `0x55` - Read from register
+### Read from register
 
 ![Read sequence](https://svg.wavedrom.com/github/fred-corp/RDRNG/main/docs/spi-read_wave.json)
 
+Transaction is 32 bits long, divided into 2 MOSI bytes followed by 2 MISO bytes :
+
+* MOSI bytes :
+  * First byte : MSB indicates wether the transaction is a read (`1`) operation
+  * Second byte : register address
+* MISO bytes :
+  * Third byte : register value MSB
+  * Fourth byte : register value LSB
+
 | Address | Description                                                                       | Example Complete command |
 | ------- | --------------------------------------------------------------------------------- | ------------------------ |
-| `0x00`  | Read generated number (2 bytes, unsigned)                                         | `0x55 0x01 0x00 0x00`    |
-| `0x01`  | Read custom seed (2 bytes, unsigned)                                              | `0x55 0x01 0x00 0x00`    |
-| `0x02`  | Read generated seed from radioactive decay (2 bytes unsigned)                     | `0x55 0x02 0x00 0x00`    |
-| `0x03`  | Read LFSR polynomial (2 last bits)                                                | `0x55 0x03 0x00 0x00`    |
+| `0x00`  | Read generated number (2 bytes, unsigned)                                         | `0x80000000`             |
+| `0x01`  | Read custom seed (2 bytes, unsigned)                                              | `0x80010000`             |
+| `0x02`  | Read generated seed from radioactive decay (2 bytes unsigned)                     | `0x80020000`             |
+| `0x03`  | Read LFSR polynomial (2 last bits)                                                | `0x80030000`             |
 
 ## License & Acknowledgements
 

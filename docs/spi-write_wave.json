@@ -1,7 +1,7 @@
 {
   "signal": [
-  {"name": "SCL", "wave": "P.|.|.|.|."},
-  {"name": "MOSI", "wave": "x3.4.5.=.x", "data": ["0x55", "Address", "Data 0", "Data 1"]},
+  {"name": "SCK", "wave": "P.|.|.|.|."},
+  {"name": "MOSI", "wave": "x3.4.5.=.x", "data": ["R/W", "Address", "Data 0", "Data 1"]},
   {"name": "MISO", "wave": "x........."},
   {"name": "CS", "wave": "10.......1"}
   ]
