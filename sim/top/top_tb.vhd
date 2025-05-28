@@ -62,6 +62,7 @@ architecture tb of top_tb is
     signal read_data    : out std_logic_vector(15 downto 0);
     constant sck_period : time := 10 us
   ) is
+    variable s_read_data  : std_logic_vector(read_bits - 1 downto 0) := (others => '0');
   begin
     cs <= '0';
     wait for sck_period / 2;
@@ -77,13 +78,14 @@ architecture tb of top_tb is
       mosi <= '0';
       wait for sck_period / 2;
       sck <= '1';
-      read_data(i) <= miso;
+      s_read_data(i) := miso;
       wait for sck_period / 2;
       sck <= '0';
     end loop;
     wait for sck_period / 2;
     cs <= '1';
     wait for sck_period;
+    read_data <= s_read_data;
   end procedure;
 begin
 

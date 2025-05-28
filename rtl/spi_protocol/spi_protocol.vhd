@@ -51,14 +51,10 @@ architecture rtl of spi_protocol is
   WRITE_ADDRESS, -- Write address select
   WRITE_DATA0, -- Write data, bit 16 to 9
   WRITE_DATA1, -- Write data, bit 8 to 1
-  WRITE_ANSWER_HEADER, -- Write answer header for master
-  WRITE_ANSWER_OK, -- Write answer OK for master
   READ_ADDRESS, -- Read address select
-  READ_ANSWER_HEADER, -- Read answer header for master
   READ_ANSWER_DATA0, -- Read answer data, bit 16 to 9
-  READ_WAIT_1, -- Wait for SPI module to send first byte
+  READ_WAIT, -- Wait for SPI module to send first byte
   READ_ANSWER_DATA1, -- Read answer data, bit 8 to 1
-  READ_WAIT_2, -- Wait for SPI module to send second byte
   APB_SETUP, -- APB setup
   APB_EXECUTE, -- APB execute
   APB_DONE, -- APB done
@@ -96,6 +92,7 @@ begin
       end if;
       case state is
         when IDLE =>
+          tx_valid_i <= '0';
           if rx_valid = '1' then
             if (rx_data or "01111111") = "01111111" then
               state      <= WRITE_ADDRESS;
@@ -135,33 +132,27 @@ begin
           tx_data <= apb_data(15 downto 8);
           if rx_valid = '0' and tx_ready = '1' then
             tx_valid_i <= '1';
-            state      <= READ_WAIT_1;
+            state      <= READ_WAIT;
           else
             state <= READ_ANSWER_DATA0;
           end if;
-        when READ_WAIT_1 =>
+        when READ_WAIT =>
           tx_valid_i <= '0';
           if Resp_Sent = '1' then
             state <= READ_ANSWER_DATA1;
           else
-            state <= READ_WAIT_1;
+            state <= READ_WAIT;
           end if;
         when READ_ANSWER_DATA1 =>
           tx_data    <= apb_data(7 downto 0);
           tx_valid_i <= '0';
           if rx_valid = '0' and tx_ready = '1' then
             tx_valid_i <= '1';
-            state      <= READ_WAIT_2;
+            state      <= IDLE;
           else
             state <= READ_ANSWER_DATA1;
           end if;
-        when READ_WAIT_2 =>
-          tx_valid_i <= '0';
-          if Resp_Sent = '1' then
-            state <= IDLE;
-          else
-            state <= READ_WAIT_2;
-          end if;
+
         when APB_SETUP =>
           m_psel    <= '1';
           m_paddr   <= address;
