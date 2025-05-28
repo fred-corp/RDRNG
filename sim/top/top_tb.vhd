@@ -73,12 +73,13 @@ architecture tb of top_tb is
       wait for sck_period / 2;
       sck <= '0';
     end loop;
-    wait for sck_period / 2;
     for i in read_bits - 1 downto 0 loop
-      sck <= '1';
+      mosi <= '0';
       wait for sck_period / 2;
+      sck <= '1';
       read_data(i) <= miso;
-      sck          <= '0';
+      wait for sck_period / 2;
+      sck <= '0';
     end loop;
     wait for sck_period / 2;
     cs <= '1';
