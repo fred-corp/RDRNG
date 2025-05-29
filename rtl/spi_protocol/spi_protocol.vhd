@@ -72,12 +72,9 @@ begin
 
   main : process (clk)
   begin
-
-    tx_valid <= tx_valid_i;
-
     if rising_edge(clk) then
       if Resp_CleanEnd = '1' then
-        state      <= IDLE;
+        state <= IDLE;
         -- m_psel     <= '0';
         -- m_penable  <= '0';
         -- m_pwrite   <= '0';
@@ -182,7 +179,7 @@ begin
         m_pwrite   <= '0';
         m_pwdata   <= (others => '0');
         m_paddr    <= (others => '0');
-        tx_valid   <= '0';
+        tx_valid_i <= '0';
         tx_data    <= (others => '0');
         apb_data   <= (others => '0');
         address    <= (others => '0');
@@ -191,5 +188,8 @@ begin
       end if;
     end if;
   end process main;
+
+  -- Assign outputs
+  tx_valid <= tx_valid_i;
 
 end rtl;
