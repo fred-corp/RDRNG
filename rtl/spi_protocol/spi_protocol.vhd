@@ -51,11 +51,9 @@ architecture rtl of spi_protocol is
   WRITE_ADDRESS, -- Write address select
   WRITE_DATA0, -- Write data, bit 16 to 9
   WRITE_DATA1, -- Write data, bit 8 to 1
-  WRITE_ANSWER_HEADER, -- Write answer header for master
-  WRITE_ANSWER_OK, -- Write answer OK for master
   READ_ADDRESS, -- Read address select
-  READ_ANSWER_HEADER, -- Read answer header for master
   READ_ANSWER_DATA0, -- Read answer data, bit 16 to 9
+  READ_WAIT, -- Wait for SPI module to send first byte
   READ_ANSWER_DATA1, -- Read answer data, bit 8 to 1
   APB_SETUP, -- APB setup
   APB_EXECUTE, -- APB execute
@@ -68,24 +66,42 @@ architecture rtl of spi_protocol is
   signal apb_data   : std_logic_vector(15 downto 0) := (others => '0'); --* APB data
   signal address    : std_logic_vector(7 downto 0)  := (others => '0'); --* Address
   signal wr_data    : std_logic_vector(15 downto 0) := (others => '0'); --* Write data
+  signal tx_valid_i : std_logic                     := '0'; --* Transmitter valid signal
+
 begin
 
   main : process (clk)
   begin
     if rising_edge(clk) then
+      if Resp_CleanEnd = '1' then
+        state <= IDLE;
+        -- m_psel     <= '0';
+        -- m_penable  <= '0';
+        -- m_pwrite   <= '0';
+        -- m_pwdata   <= (others => '0');
+        -- m_paddr    <= (others => '0');
+        -- tx_valid_i <= '0';
+        -- tx_data    <= (others => '0');
+        -- apb_data   <= (others => '0');
+        -- address    <= (others => '0');
+        -- write_flag <= '0';
+        -- wr_data    <= (others => '0');
+      end if;
       case state is
         when IDLE =>
+          tx_valid_i <= '0';
           if rx_valid = '1' then
-            if rx_data = x"AA" then
+            if (rx_data or "01111111") = "01111111" then
               state      <= WRITE_ADDRESS;
               write_flag <= '1';
-            elsif rx_data = x"55" then
+            elsif (rx_data and "10000000") = "10000000" then
               state      <= READ_ADDRESS;
               write_flag <= '0';
             else
               state <= IDLE;
             end if;
           end if;
+
         when WRITE_ADDRESS =>
           address <= rx_data;
           if rx_valid = '1' then
@@ -101,20 +117,6 @@ begin
           if rx_valid = '1' then
             state <= APB_SETUP;
           end if;
-        when WRITE_ANSWER_HEADER =>
-          tx_data  <= x"AA";
-          tx_valid <= '1';
-          if tx_ready = '1' then
-            tx_valid <= '0';
-            state    <= WRITE_ANSWER_OK;
-          end if;
-        when WRITE_ANSWER_OK =>
-          tx_data  <= x"00";
-          tx_valid <= '1';
-          if tx_ready = '1' then
-            tx_valid <= '0';
-            state    <= IDLE;
-          end if;
 
         when READ_ADDRESS =>
           address <= rx_data;
@@ -123,30 +125,27 @@ begin
           else
             state <= READ_ADDRESS;
           end if;
-        when READ_ANSWER_HEADER =>
-          tx_data  <= x"55";
-          tx_valid <= '1';
-          if tx_ready = '1' then
-            tx_valid <= '0';
-            state    <= READ_ANSWER_DATA0;
-          else
-            state <= READ_ANSWER_HEADER;
-          end if;
         when READ_ANSWER_DATA0 =>
-          tx_data  <= x"01";--apb_data(15 downto 8);
-          tx_valid <= '1';
-          if tx_ready = '1' then
-            tx_valid <= '0';
-            state    <= READ_ANSWER_DATA1;
+          tx_data <= apb_data(15 downto 8);
+          if rx_valid = '0' and tx_ready = '1' then
+            tx_valid_i <= '1';
+            state      <= READ_WAIT;
           else
             state <= READ_ANSWER_DATA0;
           end if;
+        when READ_WAIT =>
+          tx_valid_i <= '0';
+          if Resp_Sent = '1' then
+            state <= READ_ANSWER_DATA1;
+          else
+            state <= READ_WAIT;
+          end if;
         when READ_ANSWER_DATA1 =>
-          tx_data  <= x"23";--apb_data(7 downto 0);
-          tx_valid <= '1';
-          if tx_ready = '1' then
-            tx_valid <= '0';
-            state    <= IDLE;
+          tx_data    <= apb_data(7 downto 0);
+          tx_valid_i <= '0';
+          if rx_valid = '0' and tx_ready = '1' then
+            tx_valid_i <= '1';
+            state      <= IDLE;
           else
             state <= READ_ANSWER_DATA1;
           end if;
@@ -160,14 +159,15 @@ begin
           state     <= APB_EXECUTE;
         when APB_EXECUTE =>
           m_penable <= '1';
-          apb_data  <= m_prdata;
           state     <= APB_DONE;
         when APB_DONE =>
-          m_psel <= '0';
+          m_psel   <= '0';
+          apb_data <= m_prdata;
           if write_flag = '1' then
-            state <= WRITE_ANSWER_HEADER;
+            state <= IDLE;
+            -- state <= WRITE_ANSWER_HEADER;
           elsif write_flag = '0' then
-            state <= READ_ANSWER_HEADER;
+            state <= READ_ANSWER_DATA0;
           end if;
         when others =>
           null;
@@ -179,7 +179,7 @@ begin
         m_pwrite   <= '0';
         m_pwdata   <= (others => '0');
         m_paddr    <= (others => '0');
-        tx_valid   <= '0';
+        tx_valid_i <= '0';
         tx_data    <= (others => '0');
         apb_data   <= (others => '0');
         address    <= (others => '0');
@@ -188,5 +188,8 @@ begin
       end if;
     end if;
   end process main;
+
+  -- Assign outputs
+  tx_valid <= tx_valid_i;
 
 end rtl;
