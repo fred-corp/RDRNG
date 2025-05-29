@@ -6,10 +6,6 @@ s = SPIDriver("/dev/tty.usbserial-DO00PNLE")
 def spi_write(address, data):
     # Command looks like 0x00XXYYYY, with XX being the address and YYYY being the data
     command = (address << 16) | data
-
-    # print command as hex
-    # print(command.to_bytes(4, 'big'))
-    
     s.sel()
     s.write(command.to_bytes(4, 'big'))
     s.unsel()
@@ -18,20 +14,14 @@ def spi_write(address, data):
 def spi_read(address, bytes):
     # Command looks like 0x80XX, with XX being the address
     command = (0x80 << 24) | address << 16
-    # print(command.to_bytes(2, 'big'))
     s.sel()
     read_data = list(s.writeread(command.to_bytes(4, 'big')))
-    # read_data = list(s.read(bytes))
     s.unsel()
     s.unsel()
-    # if (hex(read_data[0]<< 8) == '0x2300') :
-    #     data = spi_read(address, bytes)  # Retry if we get a 0x23 response
-    # else :
     data = read_data[len(read_data)-bytes] << 8 | read_data[len(read_data)-bytes+1]
     return data
 
-
-
+# Reset the device
 spi_write(0x10, 0x0000)
 spi_write(0x12, 0x0000)
 spi_write(0x14, 0x0000)
