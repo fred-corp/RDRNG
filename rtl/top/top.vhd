@@ -254,10 +254,10 @@ begin
 
   -- *** LED drivers ***
   led_r <= '0' when led_out_r = '1' else
-    'Z';
+    '1';
   led_g <= '0' when led_out_g = '1' else
-    'Z';
+    '1';
   led_b <= '0' when led_out_b = '1' else
-    'Z';
+    '1';
 
 end architecture rtl;
