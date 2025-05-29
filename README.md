@@ -2,8 +2,6 @@
 
 ![OpenLane Workflow](https://github.com/fred-corp/RDRNG/actions/workflows/gds.yaml/badge.svg) [![GitHub Release](https://img.shields.io/github/v/release/fred-corp/RDRNG?display_name=release)](https://github.com/fred-corp/RDRNG/releases/latest)
 
-
-
 ## Summary
 
 ## Description
