@@ -90,16 +90,16 @@ The design is implemented in VHDL and synthesized using the Open Logic FPGA Stan
 
 ## Links, tools and sources
 
-* Random number generation, Wikipedia, https://en.wikipedia.org/wiki/Random_number_generation
-* Hardware random number generator, Wikipedia, https://en.wikipedia.org/wiki/Hardware_random_number_generator
+* Random number generation, Wikipedia, [Random number generation](https://en.wikipedia.org/wiki/Random_number_generation)
+* Hardware random number generator, Wikipedia, [Hardware random number generator](https://en.wikipedia.org/wiki/Hardware_random_number_generator)
 * Cover page illustration created with OpenLane2, gds3xtrude, and OpenScad
 * Apple Intelligence for syntax and grammar verification
 * GitHub Copilot for code debugging
-* Open Logic FPGA Standard library, https://github.com/open-logic/open-logic
-* WaveDrom to create signal bus diagrams, https://wavedrom.com/
+* Open Logic FPGA Standard library, [Open Logic GitHub Repo](https://github.com/open-logic/open-logic)
+* WaveDrom to create signal bus diagrams, [WaveDrom Website](https://wavedrom.com/)
 * TerosHDL, Yosys, GHDL to generate netlist diagrams from VHDL sources
-* OSS CAD Suite for RTL Synthesis, https://github.com/YosysHQ/oss-cad-suite-build
-* TinyVision pico-ice, https://pico-ice.tinyvision.ai/
+* OSS CAD Suite for RTL Synthesis, [OSS-CAD-Suite GitHub Repo](https://github.com/YosysHQ/oss-cad-suite-build)
+* TinyVision pico-ice, [pico-ice Website](https://pico-ice.tinyvision.ai/)
 * R. Zafar et al., « Randomness from Radiation: Evaluation and Analysis of Radiation-Based Random Number Generators », 30 September 2024, arXiv: arXiv:2409.20492. doi : [10.48550/arXiv.2409.20492](http://doi.org/10.48550/arXiv.2409.20492).
 * J. L. Anderson et G. W. Spangler, « Serial statistics. Is radioactive decay random », J. Phys. Chem., vol. 77, no. 26, p. 3114–3121, Dec. 1973, doi : [10.1021/j100644a019](http://doi.org/10.1021/j100644a019).
 * A. Alkassar, T. Nicolay, et M. Rohe, « Obtaining True-Random Binary Numbers from a Weak Radioactive Source », in Computational Science and Its Applications – ICCSA 2005, Springer, Berlin, Heidelberg, 2005, p. 634–646. doi : [10.1007/11424826_67](http://doi.org/10.1007/11424826_67).
