@@ -4,7 +4,20 @@
 
 ## Summary
 
+* [Summary](#summary)
+* [Description](#description)
+* [Modes](#modes)
+  * [Decay sampling](#decay-sampling)
+  * [LFSR](#lfsr)
+* [SPI Command Set](#spi-command-set)
+* [links, tools and sources](#links-tools-and-sources)
+* [License & Acknowledgements](#license--acknowledgements)
+
 ## Description
+
+> A project report is available in the [docs](/docs/project_report.pdf) folder.
+
+This project implements a hardware random number generator (RNG) based on the stochastic nature of radioactive decay events. The design is intended for use in applications requiring high-entropy random numbers, such as cryptographic systems or secure communications.
 
 ## Modes
 
@@ -33,7 +46,7 @@ This mode allows high-speed random number generation suitable for scenarios wher
 
 ### Write to register
 
-![Write sequence](https://svg.wavedrom.com/github/fred-corp/RDRNG/main/docs/spi-write_wave.json)
+![Write sequence](/docs/images/spi-write_wave.png)
 
 Transaction is 32 bits long, divided into 4 bytes :
 
@@ -51,7 +64,7 @@ Transaction is 32 bits long, divided into 4 bytes :
 
 ### Read from register
 
-![Read sequence](https://svg.wavedrom.com/github/fred-corp/RDRNG/main/docs/spi-read_wave.json)
+![Read sequence](/docs/images/spi-read_wave.png)
 
 Transaction is 32 bits long, divided into 2 MOSI bytes followed by 2 MISO bytes :
 
@@ -68,6 +81,28 @@ Transaction is 32 bits long, divided into 2 MOSI bytes followed by 2 MISO bytes 
 | `0x01`  | Read custom seed (2 bytes, unsigned)                                              | `0x80010000`             |
 | `0x02`  | Read generated seed from radioactive decay (2 bytes unsigned)                     | `0x80020000`             |
 | `0x03`  | Read LFSR polynomial (2 last bits)                                                | `0x80030000`             |
+
+## FPGA Implementation
+
+![FPGA Schematic](/docs/images/fpga_schematic.drawio.png)
+
+The design is implemented in VHDL and synthesized using the Open Logic FPGA Standard library.
+
+## Links, tools and sources
+
+* Random number generation, Wikipedia, https://en.wikipedia.org/wiki/Random_number_generation
+* Hardware random number generator, Wikipedia, https://en.wikipedia.org/wiki/Hardware_random_number_generator
+* Cover page illustration created with OpenLane2, gds3xtrude, and OpenScad
+* Apple Intelligence for syntax and grammar verification
+* GitHub Copilot for code debugging
+* Open Logic FPGA Standard library, https://github.com/open-logic/open-logic
+* WaveDrom to create signal bus diagrams, https://wavedrom.com/
+* TerosHDL, Yosys, GHDL to generate netlist diagrams from VHDL sources
+* OSS CAD Suite for RTL Synthesis, https://github.com/YosysHQ/oss-cad-suite-build
+* TinyVision pico-ice, https://pico-ice.tinyvision.ai/
+* R. Zafar et al., « Randomness from Radiation: Evaluation and Analysis of Radiation-Based Random Number Generators », 30 September 2024, arXiv: arXiv:2409.20492. doi : [10.48550/arXiv.2409.20492](http://doi.org/10.48550/arXiv.2409.20492).
+* J. L. Anderson et G. W. Spangler, « Serial statistics. Is radioactive decay random », J. Phys. Chem., vol. 77, no. 26, p. 3114–3121, Dec. 1973, doi : [10.1021/j100644a019](http://doi.org/10.1021/j100644a019).
+* A. Alkassar, T. Nicolay, et M. Rohe, « Obtaining True-Random Binary Numbers from a Weak Radioactive Source », in Computational Science and Its Applications – ICCSA 2005, Springer, Berlin, Heidelberg, 2005, p. 634–646. doi : [10.1007/11424826_67](http://doi.org/10.1007/11424826_67).
 
 ## License & Acknowledgements
 
